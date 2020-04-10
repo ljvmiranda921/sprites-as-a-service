@@ -37,11 +37,14 @@ def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
     logger.debug("Initializing board")
     board = sg.Board(size=(8, 4))
 
+    logger.debug("Seeding the lifeform")
+    #TODO: Add random seed
     noise = np.random.choice([0, 1], size=(8, 4))
     custom_lf = lf.Custom(noise)
     board.add(custom_lf, loc=(0, 0))
-    sim = sg.Simulator(board)
+
     logger.debug("Running the simulation")
+    sim = sg.Simulator(board)
     sim.run(
         _custom_rule,
         iters=n_iters,
