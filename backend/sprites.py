@@ -14,8 +14,26 @@ from loguru import logger
 from scipy.signal import convolve2d
 
 
-def generate_sprite(n_iters: int, repro_rate: float, stasis_rate: float):
-    """Generate a sprite given different parameters"""
+def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
+    """Generate a sprite given various parameters
+
+    Parameters
+    ----------
+    n_iters : int
+        Number of iterations to run Conway's Game of Life.
+    ext_rate : float (0.0 to 1.0)
+        Controls how many dead cells will stay dead on the next iteration
+        Default is 0.125 (around 1 cell)
+    stasis_rate: float (0.0 to 1.0)
+        Controls how many live cells will stay alive on the next iteration.
+        Default is 0.375 (around 3 cells)
+    seed : int (optional)
+        Random seed. Default is None
+
+    Returns
+    -------
+    matplotlib.Figure
+    """
     logger.debug("Initializing board")
     board = sg.Board(size=(8, 4))
 
@@ -27,8 +45,8 @@ def generate_sprite(n_iters: int, repro_rate: float, stasis_rate: float):
     sim.run(
         _custom_rule,
         iters=n_iters,
-        repro_rate=repro_rate,
-        stasis_rate=stasis_rate,
+        n_extinct=int(ext_rate * 8),
+        n_stasis=int(stasis_rate * 8),
     )
     fstate = sim.get_history()[-1]
 
@@ -61,11 +79,11 @@ def generate_sprite(n_iters: int, repro_rate: float, stasis_rate: float):
     return fig
 
 
-def _custom_rule(X, repro_rate=3, stasis_rate=3) -> np.ndarray:
+def _custom_rule(X, n_extinct=3, n_stasis=3) -> np.ndarray:
     """Custom Conway's Rule"""
     n = convolve2d(X, np.ones((3, 3)), mode="same", boundary="fill") - X
-    reproduction_rule = (X == 0) & (n <= repro_rate)
-    stasis_rule = (X == 1) & ((n == 2) | (n == stasis_rate))
+    reproduction_rule = (X == 0) & (n <= n_extinct)
+    stasis_rule = (X == 1) & ((n == 2) | (n == n_stasis))
     return reproduction_rule | stasis_rule
 
 
