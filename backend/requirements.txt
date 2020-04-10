@@ -1,0 +1,5 @@
+loguru
+numpy
+matplotlib
+pyseagull
+fastapi
