@@ -23,7 +23,7 @@ def make_sprite(
     n_iters: int = 1,
     ext_rate: float = 0.125,
     stasis_rate: float = 0.375,
-    size: int = 64,
+    size: int = 180,
 ):
     # TODO: If query exists, generate a seed and run make_sprite
     # else, then just return a random sprite
