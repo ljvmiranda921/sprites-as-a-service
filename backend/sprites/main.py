@@ -12,8 +12,8 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 
 # Import from package
-import sprites
-import hashing
+from .sprites import generate_sprite
+from .hashing import get_seeds, hash
 
 app = FastAPI(
     title="Sprite as a Service",
@@ -35,7 +35,7 @@ def make_sprite(
         sprite_seed, color_seeds = seeds
 
         logger.info("Generating sprite")
-        fig = sprites.generate_sprite(
+        fig = generate_sprite(
             n_iters=n_iters,
             ext_rate=ext_rate,
             stasis_rate=stasis_rate,

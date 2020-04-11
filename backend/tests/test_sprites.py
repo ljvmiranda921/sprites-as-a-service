@@ -9,7 +9,7 @@ from matplotlib.figure import Figure
 from matplotlib.testing.decorators import check_figures_equal
 
 # Import from package
-import sprites
+from sprites import sprites
 
 
 def test_generate_sprite_return_type():

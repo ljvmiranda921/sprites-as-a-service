@@ -1,4 +1,4 @@
-import hashing
+from sprites import hashing
 
 
 def test_seed_is_always_the_same_after_consecutive_runs():
