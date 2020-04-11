@@ -4,6 +4,8 @@ import io
 # Import modules
 from fastapi import FastAPI, Response, HTTPException
 from loguru import logger
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 
