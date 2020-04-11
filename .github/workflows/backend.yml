@@ -30,10 +30,9 @@ jobs:
       run: make test
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
-      working-directory: backend
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage.xml
+        file: ./backend/coverage.xml
         flags: backend
         name: codecov-sprites
         fail_ci_if_error: true
