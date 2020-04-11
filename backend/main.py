@@ -28,9 +28,7 @@ def make_sprite(
 ):
     try:
         seeds = hashing.get_seeds(hashing.hash(q)) if q else (None, None)
-        logger.debug(seeds)
         sprite_seed, color_seeds = seeds
-        logger.info(seeds)
 
         logger.info("Generating sprite")
         fig = sprites.generate_sprite(
