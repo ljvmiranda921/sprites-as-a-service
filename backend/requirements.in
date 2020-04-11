@@ -1,0 +1,6 @@
+loguru
+numpy
+matplotlib
+pyseagull
+fastapi
+uvicorn
