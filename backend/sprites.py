@@ -1,7 +1,8 @@
 # Import standard library
 import random
+import itertools
 from math import sqrt
-from typing import Tuple
+from typing import Tuple, List
 
 # Import modules
 import matplotlib as mpl
@@ -17,7 +18,12 @@ logger.disable("seagull")  # Do not print logs from Seagull
 
 
 def generate_sprite(
-    n_iters=1, ext_rate=0.125, stasis_rate=0.375, size=180, seed=None
+    n_iters: int = 1,
+    ext_rate: float = 0.125,
+    stasis_rate: float = 0.375,
+    size: float = 180,
+    sprite_seed: int = None,
+    color_seeds: List[int] = None,
 ):
     """Generate a sprite given various parameters
 
@@ -33,8 +39,10 @@ def generate_sprite(
         Default is 0.375 (around 3 cells)
     size : int
         Size of the generated sprite in pixels. Default is 180 for 180 x 180px.
-    seed : int (optional)
-        Random seed. Default is None
+    sprite_seed : int (optional)
+        Random seed for the Sprite. Default is None
+    color_seeds : list (optional)
+        Random seed for the colors. Default is None
 
     Returns
     -------
@@ -44,8 +52,8 @@ def generate_sprite(
     board = sg.Board(size=(8, 4))
 
     logger.debug("Seeding the lifeform")
-    if seed:
-        np.random.seed(seed)
+    if sprite_seed:
+        np.random.seed(sprite_seed)
     noise = np.random.choice([0, 1], size=(8, 4))
     custom_lf = lf.Custom(noise)
     board.add(custom_lf, loc=(0, 0))
@@ -68,7 +76,11 @@ def generate_sprite(
     sprite_final = _combine(sprite_with_outline, sprite_gradient)
 
     logger.trace("Registering a colormap")
-    colors = ["black", "#f2f2f2", _color(), _color(), _color()]
+    iterator = list(_group(3, color_seeds))[:3] if color_seeds else [None] * 3
+    random_colors = [_color(seeds) for seeds in iterator]
+    base_colors = ["black", "#f2f2f2"]
+    colors = base_colors + random_colors
+    logger.trace(f"Colors to use: {colors}")
     cm.register_cmap(
         cmap=mpl.colors.LinearSegmentedColormap.from_list(
             "custom", colors
@@ -83,7 +95,7 @@ def generate_sprite(
     return fig
 
 
-def _custom_rule(X, n_extinct=3, n_stasis=3) -> np.ndarray:
+def _custom_rule(X: np.ndarray, n_extinct: int = 3, n_stasis: int = 3) -> np.ndarray:
     """Custom Conway's Rule"""
     n = convolve2d(X, np.ones((3, 3)), mode="same", boundary="fill") - X
     reproduction_rule = (X == 0) & (n <= n_extinct)
@@ -91,11 +103,15 @@ def _custom_rule(X, n_extinct=3, n_stasis=3) -> np.ndarray:
     return reproduction_rule | stasis_rule
 
 
-def _color():
+def _color(seeds: Tuple[int, int, int] = None) -> str:
     """Returns a random hex code"""
-    return "#{:02X}{:02X}{:02X}".format(
-        random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
-    )
+    hex_values = []
+    for i in range(3):
+        if seeds:
+            random.seed(seeds[i])
+        h = random.randint(0, 255)
+        hex_values.append(h)
+    return "#{:02X}{:02X}{:02X}".format(*hex_values)
 
 
 def _add_outline(mat: np.ndarray) -> np.ndarray:
@@ -192,3 +208,8 @@ def _combine(mat_outline: np.ndarray, mat_gradient: np.ndarray) -> np.ndarray:
     mask = mat_outline == 0
     mat_final[mask] = mat_gradient[mask]
     return mat_final
+
+
+def _group(n, it):
+    args = [iter(it)] * n
+    return itertools.zip_longest(fillvalue=None, *args)
