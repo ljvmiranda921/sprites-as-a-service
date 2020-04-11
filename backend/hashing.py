@@ -1,6 +1,7 @@
+# Import standard library
 import hashlib
-from typing import List, Tuple
 from collections import deque
+from typing import List, Tuple
 
 
 def hash(string: str) -> str:
