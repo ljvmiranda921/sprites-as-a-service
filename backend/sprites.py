@@ -67,7 +67,7 @@ def generate_sprite(
     sprite_gradient = _get_gradient(sprite_with_outline)
     sprite_final = _combine(sprite_with_outline, sprite_gradient)
 
-    logger.debug("Registering a colormap")
+    logger.trace("Registering a colormap")
     colors = ["black", "#f2f2f2", _color(), _color(), _color()]
     cm.register_cmap(
         cmap=mpl.colors.LinearSegmentedColormap.from_list(
@@ -76,10 +76,10 @@ def generate_sprite(
     )
 
     logger.debug("Preparing final image")
-    fig, axs = plt.subplots(1, 1, figsize=(5, 5))
+    fig, axs = plt.subplots(1, 1, figsize=(5, 5), dpi=size)
     axs = fig.add_axes([0, 0, 1, 1], xticks=[], yticks=[], frameon=False)
     axs.imshow(sprite_final, cmap="custom_r", interpolation="nearest")
-    logger.success("Successfully generated sprite!")
+    logger.debug("Successfully generated sprite!")
     return fig
 
 
