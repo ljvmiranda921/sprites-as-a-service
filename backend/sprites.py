@@ -76,7 +76,7 @@ def generate_sprite(
     )
 
     logger.debug("Preparing final image")
-    fig, axs = plt.subplots(1, 1, figsize=(5, 5), dpi=size)
+    fig, axs = plt.subplots(1, 1, figsize=(1, 1), dpi=size)
     axs = fig.add_axes([0, 0, 1, 1], xticks=[], yticks=[], frameon=False)
     axs.imshow(sprite_final, cmap="custom_r", interpolation="nearest")
     logger.debug("Successfully generated sprite!")
