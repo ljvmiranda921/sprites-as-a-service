@@ -13,6 +13,7 @@ import seagull.lifeforms as lf
 from loguru import logger
 from scipy.signal import convolve2d
 
+logger.disable("seagull")  # Do not print logs from Seagull
 
 def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
     """Generate a sprite given various parameters
