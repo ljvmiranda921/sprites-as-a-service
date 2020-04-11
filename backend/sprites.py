@@ -4,9 +4,9 @@ from math import sqrt
 from typing import Tuple
 
 # Import modules
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import matplotlib as mpl
+import matplotlib.cm as cm
+import matplotlib.pyplot as plt
 import numpy as np
 import seagull as sg
 import seagull.lifeforms as lf
@@ -38,7 +38,8 @@ def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
     board = sg.Board(size=(8, 4))
 
     logger.debug("Seeding the lifeform")
-    #TODO: Add random seed
+    if seed:
+        np.random.seed(seed)
     noise = np.random.choice([0, 1], size=(8, 4))
     custom_lf = lf.Custom(noise)
     board.add(custom_lf, loc=(0, 0))
@@ -54,19 +55,14 @@ def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
     fstate = sim.get_history()[-1]
 
     logger.debug("Adding outline, gradient, and colors")
-    sprator = np.hstack([fstate, np.fliplr(fstate)])
-    sprator = np.pad(sprator, mode="constant", pad_width=1, constant_values=1)
-    sprator_with_outline = _add_outline(sprator)
-    sprator_gradient = _get_gradient(sprator_with_outline)
-    sprator_final = _combine(sprator_with_outline, sprator_gradient)
+    sprite = np.hstack([fstate, np.fliplr(fstate)])
+    sprite = np.pad(sprite, mode="constant", pad_width=1, constant_values=1)
+    sprite_with_outline = _add_outline(sprite)
+    sprite_gradient = _get_gradient(sprite_with_outline)
+    sprite_final = _combine(sprite_with_outline, sprite_gradient)
 
-    # Generate random colors as cmap
-    r = lambda: "#%02X%02X%02X" % (
-        random.randint(0, 255),
-        random.randint(0, 255),
-        random.randint(0, 255),
-    )
-    colors = ["black", "#f2f2f2", r(), r(), r()]
+    logger.debug("Registering a colormap")
+    colors = ["black", "#f2f2f2", _color(), _color(), _color()]
     cm.register_cmap(
         cmap=mpl.colors.LinearSegmentedColormap.from_list(
             "custom", colors
@@ -76,9 +72,8 @@ def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
     logger.debug("Preparing final image")
     fig, axs = plt.subplots(1, 1, figsize=(5, 5))
     axs = fig.add_axes([0, 0, 1, 1], xticks=[], yticks=[], frameon=False)
-    axs.imshow(sprator_final, cmap="custom_r", interpolation="nearest")
-    logger.success("Successfully generated sprite")
-
+    axs.imshow(sprite_final, cmap="custom_r", interpolation="nearest")
+    logger.success("Successfully generated sprite!")
     return fig
 
 
@@ -90,8 +85,30 @@ def _custom_rule(X, n_extinct=3, n_stasis=3) -> np.ndarray:
     return reproduction_rule | stasis_rule
 
 
+def _color():
+    """Returns a random hex code"""
+    return "#%02X%02X%02X".format(
+        random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+    )
+
+
 def _add_outline(mat: np.ndarray) -> np.ndarray:
-    """Pad the matrix"""
+    """Create an outline given a sprite image
+
+    It traverses the matrix and looks for the body of the sprite, as
+    represented by 0 values. Once it founds one, it looks around its neighbors
+    and change all background values (represented as 1) into an outline.
+
+    Parameters
+    ----------
+    mat : np.ndarray
+        The input sprite image
+
+    Returns
+    -------
+    np.ndarray
+        The sprite image with outline
+    """
     m = np.ones(mat.shape)
     for idx, orig_val in np.ndenumerate(mat):
         x, y = idx
@@ -105,8 +122,10 @@ def _add_outline(mat: np.ndarray) -> np.ndarray:
                     pass
 
     m = np.pad(m, mode="constant", pad_width=1, constant_values=1)
-    # Let's do a switcheroo, I know this isn't elegant but please feel free to
-    # do a PR to make this more efficient!
+
+    # I need to switch some values so that I get the colors right.
+    # Need to make all 0.5 (outline) as 1, and all 1 (backround)
+    # as 0.5
     m[m == 1] = np.inf
     m[m == 0.5] = 1
     m[m == np.inf] = 0.5
@@ -114,8 +133,27 @@ def _add_outline(mat: np.ndarray) -> np.ndarray:
     return m
 
 
-def _get_gradient(mat: np.ndarray) -> np.ndarray:
-    """Get gradient of an outline sprator"""
+def _get_gradient(
+    mat: np.ndarray, map_range: Tuple[float, float] = (0.2, 0.25)
+) -> np.ndarray:
+    """Get gradient of an outline sprite
+
+    We use gradient as a way to shade the body of the sprite. It is a crude
+    approach, but it works most of the time.
+
+    Parameters
+    ----------
+    mat : np.ndarray
+        The input sprite with outline
+    map_range : tuple of floats
+        Map the gradients within a certain set of values. The default is
+        between 0.2 and 0.25 because those values look better in the color map.
+
+    Returns
+    -------
+    np.ndarray
+        The sprite with shading
+    """
     grad = np.gradient(mat)[0]
 
     def _remap(new_range, matrix):
@@ -125,11 +163,25 @@ def _get_gradient(mat: np.ndarray) -> np.ndarray:
         new = new_max - new_min
         return (((matrix - old_min) * new) / old) + new_min
 
-    return _remap((0.2, 0.25), grad)
+    sprite_with_gradient = _remap(map_range, grad)
+    return sprite_with_gradient
 
 
-def _combine(mat_outline: np.ndarray, mat_gradient: np.ndarray):
-    """Combine the matrix with outline and the one with grads"""
+def _combine(mat_outline: np.ndarray, mat_gradient: np.ndarray) -> np.ndarray:
+    """Combine the sprite with outline and the one with gradients
+
+    Parameters
+    ----------
+    mat_outline: np.ndarray
+        The sprite with outline
+    mat_gradient: np.ndarray
+        The sprite with gradient
+
+    Returns
+    -------
+    np.ndarray
+        The final black-and-white sprite image before coloring
+    """
     mat_final = np.copy(mat_outline)
     mask = mat_outline == 0
     mat_final[mask] = mat_gradient[mask]
