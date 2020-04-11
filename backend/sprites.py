@@ -87,7 +87,7 @@ def _custom_rule(X, n_extinct=3, n_stasis=3) -> np.ndarray:
 
 def _color():
     """Returns a random hex code"""
-    return "#%02X%02X%02X".format(
+    return "#{:02X}{:02X}{:02X}".format(
         random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
     )
 
