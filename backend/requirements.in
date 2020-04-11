@@ -4,3 +4,4 @@ matplotlib
 pyseagull
 fastapi
 uvicorn
+requests

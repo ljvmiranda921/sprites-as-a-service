@@ -1,4 +1,6 @@
 aiocontextvars==0.2.2     # via loguru
+certifi==2020.4.5.1       # via requests
+chardet==3.0.4            # via requests
 click==7.1.1              # via uvicorn
 contextvars==2.4          # via aiocontextvars
 cycler==0.10.0            # via matplotlib
@@ -6,6 +8,7 @@ dataclasses==0.7          # via pydantic
 fastapi==0.54.1           # via -r requirements.in
 h11==0.9.0                # via uvicorn
 httptools==0.1.1          # via uvicorn
+idna==2.9                 # via requests
 immutables==0.11          # via contextvars
 kiwisolver==1.2.0         # via matplotlib
 loguru==0.4.1             # via -r requirements.in, pyseagull
@@ -15,9 +18,11 @@ pydantic==1.4             # via fastapi
 pyparsing==2.4.7          # via matplotlib
 pyseagull==1.0.0b3        # via -r requirements.in
 python-dateutil==2.8.1    # via matplotlib
+requests==2.23.0          # via -r requirements.in
 scipy==1.4.1              # via pyseagull
 six==1.14.0               # via cycler, python-dateutil
 starlette==0.13.2         # via fastapi
+urllib3==1.25.8           # via requests
 uvicorn==0.11.3           # via -r requirements.in
 uvloop==0.14.0            # via uvicorn
 websockets==8.1           # via uvicorn
