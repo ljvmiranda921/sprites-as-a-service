@@ -1,0 +1,34 @@
+aiocontextvars==0.2.2     # via -r requirements.txt, loguru
+attrs==19.3.0             # via pytest
+click==7.1.1              # via -r requirements.txt, uvicorn
+contextvars==2.4          # via -r requirements.txt, aiocontextvars
+coverage==5.0.4           # via pytest-cov
+cycler==0.10.0            # via -r requirements.txt, matplotlib
+dataclasses==0.7          # via -r requirements.txt, pydantic
+fastapi==0.54.1           # via -r requirements.txt
+h11==0.9.0                # via -r requirements.txt, uvicorn
+httptools==0.1.1          # via -r requirements.txt, uvicorn
+immutables==0.11          # via -r requirements.txt, contextvars
+importlib-metadata==1.6.0  # via pluggy, pytest
+kiwisolver==1.2.0         # via -r requirements.txt, matplotlib
+loguru==0.4.1             # via -r requirements.txt, pyseagull
+matplotlib==3.2.1         # via -r requirements.txt, pyseagull
+more-itertools==8.2.0     # via pytest
+numpy==1.18.2             # via -r requirements.txt, matplotlib, pyseagull, scipy
+packaging==20.3           # via pytest
+pluggy==0.13.1            # via pytest
+py==1.8.1                 # via pytest
+pydantic==1.4             # via -r requirements.txt, fastapi
+pyparsing==2.4.7          # via -r requirements.txt, matplotlib, packaging
+pyseagull==1.0.0b3        # via -r requirements.txt
+pytest-cov==2.8.1         # via -r requirements-dev.in
+pytest==5.4.1             # via -r requirements-dev.in, pytest-cov
+python-dateutil==2.8.1    # via -r requirements.txt, matplotlib
+scipy==1.4.1              # via -r requirements.txt, pyseagull
+six==1.14.0               # via -r requirements.txt, cycler, packaging, python-dateutil
+starlette==0.13.2         # via -r requirements.txt, fastapi
+uvicorn==0.11.3           # via -r requirements.txt
+uvloop==0.14.0            # via -r requirements.txt, uvicorn
+wcwidth==0.1.9            # via pytest
+websockets==8.1           # via -r requirements.txt, uvicorn
+zipp==3.1.0               # via importlib-metadata
