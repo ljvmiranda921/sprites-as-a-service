@@ -1,4 +1,5 @@
-# Sprite-as-a-Service Backend
+# Sprite-as-a-Service Backend ![Backend CI](https://github.com/ljvmiranda921/sprite-as-a-service/workflows/Backend%20CI/badge.svg) [![codecov](https://codecov.io/gh/ljvmiranda921/sprite-as-a-service/branch/master/graph/badge.svg?token=F8DSHYTZNW)](https://codecov.io/gh/ljvmiranda921/sprite-as-a-service)
+
 
 This folder contains the backend component of Sprite-as-a-Service. In order to
 set-up your development environment *just* for this part, run the following
