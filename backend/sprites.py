@@ -15,7 +15,10 @@ from scipy.signal import convolve2d
 
 logger.disable("seagull")  # Do not print logs from Seagull
 
-def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
+
+def generate_sprite(
+    n_iters=1, ext_rate=0.125, stasis_rate=0.375, size=180, seed=None
+):
     """Generate a sprite given various parameters
 
     Parameters
@@ -28,6 +31,8 @@ def generate_sprite(n_iters=1, ext_rate=0.125, stasis_rate=0.375, seed=None):
     stasis_rate: float (0.0 to 1.0)
         Controls how many live cells will stay alive on the next iteration.
         Default is 0.375 (around 3 cells)
+    size : int
+        Size of the generated sprite in pixels. Default is 180 for 180 x 180px.
     seed : int (optional)
         Random seed. Default is None
 
