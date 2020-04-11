@@ -9,6 +9,7 @@ from matplotlib.backends.backend_svg import FigureCanvasSVG
 
 # Import from package
 import sprites
+import hashing
 
 app = FastAPI(
     title="Sprite as a Service",
@@ -19,21 +20,26 @@ app = FastAPI(
 
 @app.get("/sprite")
 def make_sprite(
-    query: str = None,
+    q: str = None,
     n_iters: int = 1,
     ext_rate: float = 0.125,
     stasis_rate: float = 0.375,
     size: int = 180,
 ):
-    # TODO: If query exists, generate a seed and run make_sprite
-    # else, then just return a random sprite
     try:
+        seeds = hashing.get_seeds(hashing.hash(q)) if q else (None, None)
+        logger.debug(seeds)
+        sprite_seed, color_seeds = seeds
+        logger.info(seeds)
+
         logger.info("Generating sprite")
         fig = sprites.generate_sprite(
             n_iters=n_iters,
             ext_rate=ext_rate,
             stasis_rate=stasis_rate,
             size=size,
+            sprite_seed=sprite_seed,
+            color_seeds=color_seeds,
         )
     except Exception as e:
         logger.error(f"Error encountered: {e}")
