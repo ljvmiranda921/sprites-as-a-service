@@ -1,3 +1,5 @@
+"""Web API entrypoint"""
+
 # Import standard library
 import io
 

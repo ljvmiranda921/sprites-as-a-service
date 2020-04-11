@@ -1,3 +1,5 @@
+"""Application logic"""
+
 # Import standard library
 import random
 import itertools

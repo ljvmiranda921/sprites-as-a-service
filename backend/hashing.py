@@ -1,3 +1,5 @@
+"""Hashing utilities"""
+
 # Import standard library
 import hashlib
 from collections import deque
