@@ -24,7 +24,7 @@ dev: venv ## setup dev environment
 	venv/bin/pip-sync requirements-dev.txt
 
 test:
-	pytest tests/  \
+	venv/bin/pytest tests/  \
 		--cov sprites/ \
 		--junit-xml=junit/test-results.xml \
 		--cov-report=xml \
