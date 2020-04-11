@@ -125,3 +125,4 @@ dmypy.json
 
 # VSCode
 /.vscode/
+junit/
