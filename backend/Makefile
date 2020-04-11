@@ -17,10 +17,10 @@ requirements-dev.txt: requirements-dev.in ## create requirements
 	--no-emit-trusted-host \
 	requirements-dev.in
 
-build: venv requirements.txt ## setup environment
+build: venv ## setup environment
 	venv/bin/pip-sync requirements.txt
 
-dev: venv requirements-dev.txt # setup dev environment
+dev: venv ## setup dev environment
 	venv/bin/pip-sync requirements-dev.txt
 
 test:
