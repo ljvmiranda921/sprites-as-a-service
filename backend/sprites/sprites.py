@@ -23,7 +23,7 @@ def generate_sprite(
     n_iters: int = 1,
     ext_rate: float = 0.125,
     stasis_rate: float = 0.375,
-    size: float = 180,
+    size: int = 180,
     sprite_seed: int = None,
     color_seeds: List[int] = None,
 ):
