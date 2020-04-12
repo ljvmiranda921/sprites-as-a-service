@@ -13,7 +13,7 @@ def hash(string: str) -> str:
     return "".join(filter(str.isdigit, value))
 
 
-def get_seeds(h: str) -> Tuple[List[int], List[int]]:
+def get_seeds(h: str) -> Tuple[int, List[int]]:
     """Generate 10 seeds"""
     # The first 10 integers will make up the sprite
     sprite_seed = int(h[:9])
