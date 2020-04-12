@@ -6,7 +6,7 @@ from collections import deque
 from typing import List, Tuple
 
 
-def hash(string: str) -> str:
+def hasher(string: str) -> str:
     h = hashlib.sha224()
     h.update(string.encode("utf-8"))
     value = h.hexdigest()

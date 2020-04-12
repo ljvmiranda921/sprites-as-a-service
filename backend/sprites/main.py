@@ -9,11 +9,10 @@ from loguru import logger
 import matplotlib
 matplotlib.use('Agg')
 from matplotlib.backends.backend_agg import FigureCanvasAgg
-from matplotlib.backends.backend_svg import FigureCanvasSVG
 
 # Import from package
 from .sprites import generate_sprite
-from .hashing import get_seeds, hash
+from .hashing import get_seeds, hasher
 
 app = FastAPI(
     title="Sprite as a Service",
@@ -31,7 +30,7 @@ def make_sprite(
     size: int = 180,
 ):
     try:
-        seeds = hashing.get_seeds(hashing.hash(q)) if q else (None, None)
+        seeds = get_seeds(hasher(q)) if q else (None, None)
         sprite_seed, color_seeds = seeds
 
         logger.info("Generating sprite")
