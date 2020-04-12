@@ -4,9 +4,7 @@ from typing import List, Tuple
 
 # Import modules
 import numpy as np
-import pytest
 from matplotlib.figure import Figure
-from matplotlib.testing.decorators import check_figures_equal
 
 # Import from package
 from sprites import sprites

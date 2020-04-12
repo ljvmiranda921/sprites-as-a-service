@@ -3,7 +3,6 @@
 # Import standard library
 import random
 import itertools
-from math import sqrt
 from typing import Tuple, List
 
 # Import modules
