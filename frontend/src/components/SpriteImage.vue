@@ -1,0 +1,14 @@
+<template>
+  <div>
+    <img :src="'data:image/png;base64,'+img" />
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["img"]
+};
+</script>
+
+<style scoped>
+</style>
