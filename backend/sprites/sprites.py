@@ -96,7 +96,9 @@ def generate_sprite(
     return fig
 
 
-def _custom_rule(X: np.ndarray, n_extinct: int = 3, n_stasis: int = 3) -> np.ndarray:
+def _custom_rule(
+    X: np.ndarray, n_extinct: int = 3, n_stasis: int = 3
+) -> np.ndarray:
     """Custom Conway's Rule"""
     n = convolve2d(X, np.ones((3, 3)), mode="same", boundary="fill") - X
     reproduction_rule = (X == 0) & (n <= n_extinct)

@@ -1,5 +1,7 @@
+# Import modules
 from fastapi.testclient import TestClient
 
+# Import from package
 from sprites.main import app
 
 client = TestClient(app)
