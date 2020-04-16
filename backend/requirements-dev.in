@@ -1,3 +1,6 @@
 -r requirements.txt
 pytest
 pytest-cov
+# Devtools
+black
+pylint
