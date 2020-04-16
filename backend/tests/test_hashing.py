@@ -1,3 +1,4 @@
+# Import from package
 from sprites import hashing
 
 
