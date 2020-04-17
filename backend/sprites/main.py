@@ -5,9 +5,11 @@ import io
 
 # Import modules
 from fastapi import FastAPI, Response, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 
 # Import from package
@@ -18,6 +20,14 @@ app = FastAPI(
     title="Sprite as a Service",
     description="Generate 8-bit avatars from Cellular Automata!",
     version="0.1.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:8080", "http://localhost"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
