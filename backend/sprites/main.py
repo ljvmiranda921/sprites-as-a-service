@@ -2,6 +2,7 @@
 
 # Import standard library
 import io
+import base64
 
 # Import modules
 from fastapi import FastAPI, Response, HTTPException
@@ -56,8 +57,9 @@ def make_sprite(
         logger.error(f"Error encountered: {e}")
         raise HTTPException(status_code=400, detail=str(e))
 
-    logger.info("Processing image into PNG")
-    output = io.BytesIO()
+    logger.info("Processing image into base64 image/png")
+    binary_output = io.BytesIO()
+
     metadata = {
         "Title": "Sprite as a Service",
         "Author": "@ljvmiranda921",
@@ -65,7 +67,7 @@ def make_sprite(
         "Copyright": "MIT License",
         "Software": "https://github.com/ljvmiranda921/sprite-as-a-service",
     }
-    FigureCanvasAgg(fig).print_png(output, metadata=metadata)
-
+    FigureCanvasAgg(fig).print_png(binary_output, metadata=metadata)
+    base64_output = base64.b64encode(binary_output.getvalue())
     logger.success("Done!")
-    return Response(output.getvalue(), media_type="image/png")
+    return Response(base64_output, media_type="image/png")
