@@ -1,29 +1,57 @@
 <template>
   <div id="app">
-    <GenerateButton @create-sprite="setSprite($event)" />
-    <SpriteImage :img="img" />
+    <GenerateButton @generate-sprite="generateSprite($event)" />
+    <SpriteDisplay :img="img" />
+    <SpriteController @update-sprite="generateSprite($event)" />
   </div>
 </template>
 
 <script>
 import GenerateButton from "./components/GenerateButton.vue";
-import SpriteImage from "./components/SpriteImage.vue";
+import SpriteDisplay from "./components/SpriteDisplay.vue";
+import SpriteController from "./components/SpriteController";
 import axios from "axios";
 
 export default {
   name: "App",
   components: {
     GenerateButton,
-    SpriteImage
+    SpriteDisplay,
+    SpriteController
   },
   data() {
     return {
-      img: ""
+      img: "",
+      spriteConfig: {
+        q: null,
+        extRate: 0.125,
+        stasisRate: 0.375,
+        size: 180
+      }
     };
   },
   methods: {
     setSprite(value) {
       this.img = value;
+    },
+    setConfig(value) {
+      this.spriteConfig = value;
+    },
+    generateSprite(spriteConfig) {
+      axios
+        .get("http://localhost:8000/sprite", {
+          params: {
+            q: spriteConfig.q,
+            ext_rate: spriteConfig.extRate,
+            stasis_rate: spriteConfig.stasisRate,
+            size: spriteConfig.size
+          }
+        })
+        .then(response => {
+          console.log("response", response.statusText);
+          this.img = response.data;
+        })
+        .catch(error => console.log("error.response", error));
     }
   },
   created() {
