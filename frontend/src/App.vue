@@ -16,17 +16,17 @@ export default {
     GenerateButton,
     SpriteImage
   },
-  data: function() {
+  data() {
     return {
       img: ""
     };
   },
   methods: {
-    setSprite: function(value) {
+    setSprite(value) {
       this.img = value;
     }
   },
-  created: function() {
+  created() {
     // Random sprite image is called every reload
     axios
       .get("http://localhost:8000/sprite")

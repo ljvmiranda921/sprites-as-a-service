@@ -11,7 +11,7 @@ import axios from "axios";
 export default {
   name: "GenerateButton",
   methods: {
-    generateSprite: function() {
+    generateSprite() {
       axios
         .get("http://localhost:8000/sprite")
         .then(response => {
