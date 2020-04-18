@@ -31,17 +31,6 @@
         step="0.1"
       />
     </div>
-
-    <div>
-      <input type="radio" id="60" value="60" v-model.number="spriteConfig.size" />
-      <label for="60">60px</label>
-      <input type="radio" id="128" value="128" v-model.number="spriteConfig.size" />
-      <label for="128">128px</label>
-      <input type="radio" id="180" value="180" v-model.number="spriteConfig.size" />
-      <label for="180">180px</label>
-      <input type="radio" id="400" value="400" v-model.number="spriteConfig.size" />
-      <label for="400">400px</label>
-    </div>
   </div>
 </template>
 
@@ -59,7 +48,6 @@ export default {
         q: null,
         extRate: 0.125,
         stasisRate: 0.375,
-        size: 180
       }
     };
   },
@@ -69,7 +57,6 @@ export default {
         q: null,
         extRate: 0.125,
         stasisRate: 0.375,
-        size: 180
       };
     }
   },

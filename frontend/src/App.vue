@@ -23,7 +23,6 @@ export default {
         q: null,
         extRate: 0.125,
         stasisRate: 0.375,
-        size: 180
       }
     };
   },
@@ -38,7 +37,7 @@ export default {
             q: spriteConfig.q,
             ext_rate: spriteConfig.extRate,
             stasis_rate: spriteConfig.stasisRate,
-            size: spriteConfig.size
+            size: 320
           }
         })
         .then(response => {
@@ -51,7 +50,11 @@ export default {
   created() {
     // Random sprite image is called every reload
     axios
-      .get("http://localhost:8000/sprite")
+      .get("http://localhost:8000/sprite", {
+          params: {
+            size: 320
+          }
+      })
       .then(response => {
         console.log("response", response.statusText);
         this.img = response.data;
