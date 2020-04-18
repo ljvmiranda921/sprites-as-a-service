@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <GenerateButton @generate-sprite="generateSprite($event)" />
     <SpriteDisplay :img="img" />
     <SpriteController @update-sprite="generateSprite($event)" />
   </div>
 </template>
 
 <script>
-import GenerateButton from "./components/GenerateButton.vue";
 import SpriteDisplay from "./components/SpriteDisplay.vue";
 import SpriteController from "./components/SpriteController";
 import axios from "axios";
@@ -15,7 +13,6 @@ import axios from "axios";
 export default {
   name: "App",
   components: {
-    GenerateButton,
     SpriteDisplay,
     SpriteController
   },
@@ -33,9 +30,6 @@ export default {
   methods: {
     setSprite(value) {
       this.img = value;
-    },
-    setConfig(value) {
-      this.spriteConfig = value;
     },
     generateSprite(spriteConfig) {
       axios
