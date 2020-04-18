@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="generateSprite">Generate!</button>
+    <input type="button" @click="generateSprite" value="Generate!">
   </div>
 </template>
 
