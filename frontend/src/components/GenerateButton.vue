@@ -1,24 +1,26 @@
 <template>
   <div>
-    <input type="button" @click="generateSprite" value="Generate!">
+    <input type="button" @click="defaultConfig" value="Generate!" />
   </div>
 </template>
 
 
 <script>
-import axios from "axios";
-
 export default {
   name: "GenerateButton",
+  data() {
+    return {
+      spriteConfig: {
+        q: null,
+        extRate: 0.125,
+        stasisRate: 0.375,
+        size: 180
+      }
+    };
+  },
   methods: {
-    generateSprite() {
-      axios
-        .get("http://localhost:8000/sprite")
-        .then(response => {
-          console.log("response", response.statusText);
-          this.$emit("create-sprite", response.data);
-        })
-        .catch(error => console.log("error.response", error));
+    defaultConfig() {
+      this.$emit("generate-sprite", this.spriteConfig);
     }
   }
 };
