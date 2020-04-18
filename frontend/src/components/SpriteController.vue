@@ -1,5 +1,7 @@
 <template>
   <div>
+    <SpriteControllerRandom @random-sprite="setDefaults" />
+
     <div>
       <input type="text" v-model.trim="spriteConfig.q" placeholder="Type anything!" />
     </div>
@@ -44,8 +46,13 @@
 </template>
 
 <script>
+import SpriteControllerRandom from "./SpriteControllerRandom.vue";
+
 export default {
   name: "SpriteController",
+  components: {
+    SpriteControllerRandom
+  },
   data() {
     return {
       spriteConfig: {
@@ -55,6 +62,16 @@ export default {
         size: 180
       }
     };
+  },
+  methods: {
+    setDefaults() {
+      this.spriteConfig = {
+        q: null,
+        extRate: 0.125,
+        stasisRate: 0.375,
+        size: 180
+      };
+    }
   },
   watch: {
     spriteConfig: {
