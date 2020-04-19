@@ -31,6 +31,7 @@
         step="0.1"
       />
     </div>
+    <!-- TODO: Add call to action: "Like it? Love it? Leave us a Star on Github"-->
   </div>
 </template>
 
