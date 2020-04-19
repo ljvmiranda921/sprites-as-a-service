@@ -28,8 +28,8 @@ export default {
       baseurl: "http://localhost:8000/api/v1/sprite",
       spriteConfig: {
         q: null,
-        extRate: 0.125,
-        stasisRate: 0.375,
+        extinction: 0.125,
+        survival: 0.375,
       }
     };
   },
@@ -38,19 +38,19 @@ export default {
       // Whether spriteConfig.q is null or an empty string,
       // we will always return null
       var queryPrefix = "?q=";
-      var extRatePrefix = "&ext_rate=";
+      var extinctionPrefix = "&extinction=";
       var queryText = spriteConfig.q;
       if (spriteConfig.q === null || spriteConfig.q == "") {
         queryPrefix = "";
-        extRatePrefix = "?ext_rate=";
+        extinctionPrefix = "?extinction=";
         queryText = null
       }
       axios
         .get(this.baseurl, {
           params: {
             q: queryText,
-            ext_rate: spriteConfig.extRate,
-            stasis_rate: spriteConfig.stasisRate,
+            extinction: spriteConfig.extinction,
+            survival: spriteConfig.survival,
             size: 300
           }
         })
@@ -59,8 +59,8 @@ export default {
           this.img = response.data;
           this.requesturl = (this.baseurl
                           + queryPrefix + spriteConfig.q
-                          + extRatePrefix + spriteConfig.extRate
-                          + "&stasis_rate=" + spriteConfig.stasisRate
+                          + extinctionPrefix + spriteConfig.extinction
+                          + "&survival=" + spriteConfig.survival
                           + "&size=" + 300);
         })
         .catch(error => console.log("error.response", error));
