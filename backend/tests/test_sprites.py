@@ -13,8 +13,8 @@ from sprites import sprites
 def test_generate_sprite_return_type():
     fig = sprites.generate_sprite(
         n_iters=1,
-        ext_rate=0.125,
-        stasis_rate=0.375,
+        extinction=0.125,
+        survival=0.375,
         size=180,
         sprite_seed=None,
         color_seeds=None,
@@ -25,14 +25,14 @@ def test_generate_sprite_return_type():
 def test_conway_alive_cell_with_no_neighbor_dies():
     cell = (1, 1)
     state = put_cells_to_board([cell])
-    next_state = sprites._custom_rule(state, n_stasis=2)
+    next_state = sprites._custom_rule(state, n_survive=2)
     assert next_state[cell] == 0
 
 
 def test_conway_alive_cell_with_one_neighbor_dies():
     cell = (1, 1)
     state = put_cells_to_board([(1, 1), cell])
-    next_state = sprites._custom_rule(state, n_stasis=2)
+    next_state = sprites._custom_rule(state, n_survive=2)
     assert next_state[cell] == 0
 
 
@@ -40,7 +40,7 @@ def test_conway_alive_cell_with_more_than_3_neighbors_dies():
     cell = (1, 1)
     alive_cells = [(0, 0), (1, 0), (2, 0), (2, 1)]
     state = put_cells_to_board(alive_cells + [cell])
-    next_state = sprites._custom_rule(state, n_stasis=2)
+    next_state = sprites._custom_rule(state, n_survive=2)
     assert next_state[cell] == 0
 
 
@@ -48,7 +48,7 @@ def test_conway_alive_cell_with_2_neighbors_lives():
     cell = (1, 1)
     alive_cells = [(0, 1), (1, 0)]
     state = put_cells_to_board(alive_cells + [cell])
-    next_state = sprites._custom_rule(state, n_stasis=2)
+    next_state = sprites._custom_rule(state, n_survive=2)
     assert next_state[cell] == 1
 
 
@@ -56,7 +56,7 @@ def test_conway_alive_cell_with_3_neighbors_lives():
     cell = (1, 1)
     alive_cells = [(0, 0), (1, 0), (2, 1)]
     state = put_cells_to_board(alive_cells + [cell])
-    next_state = sprites._custom_rule(state, n_stasis=3)
+    next_state = sprites._custom_rule(state, n_survive=3)
     assert next_state[cell] == 1
 
 
@@ -64,7 +64,7 @@ def test_conway_dead_cell_with_three_live_neighbors_lives():
     dead_cell = (1, 1)
     alive_cells = [(2, 2), (1, 0), (2, 1)]
     state = put_cells_to_board(alive_cells)
-    next_state = sprites._custom_rule(state, n_stasis=3)
+    next_state = sprites._custom_rule(state, n_survive=3)
     assert next_state[dead_cell] == 1
 
 
@@ -72,7 +72,7 @@ def test_conway_dead_cell_with_two_live_neighbors_stay_dead():
     dead_cell = (1, 1)
     alive_cells = [(2, 2), (1, 0)]
     state = put_cells_to_board(alive_cells)
-    next_state = sprites._custom_rule(state, n_stasis=3, n_extinct=0)
+    next_state = sprites._custom_rule(state, n_survive=3, n_extinct=0)
     assert next_state[dead_cell] == 0
 
 

@@ -36,8 +36,8 @@ app.add_middleware(
 def make_sprite(
     q: str = None,
     n_iters: int = 1,
-    ext_rate: float = 0.125,
-    stasis_rate: float = 0.375,
+    extinction: float = 0.125,
+    survival: float = 0.375,
     size: int = 180,
 ):
     try:
@@ -47,8 +47,8 @@ def make_sprite(
         logger.info("Generating sprite")
         fig = generate_sprite(
             n_iters=n_iters,
-            ext_rate=ext_rate,
-            stasis_rate=stasis_rate,
+            extinction=extinction,
+            survival=survival,
             size=size,
             sprite_seed=sprite_seed,
             color_seeds=color_seeds,

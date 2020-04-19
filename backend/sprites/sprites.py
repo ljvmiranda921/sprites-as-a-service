@@ -20,8 +20,8 @@ logger.disable("seagull")  # Do not print logs from Seagull
 
 def generate_sprite(
     n_iters: int = 1,
-    ext_rate: float = 0.125,
-    stasis_rate: float = 0.375,
+    extinction: float = 0.125,
+    survival: float = 0.375,
     size: int = 180,
     sprite_seed: int = None,
     color_seeds: List[int] = None,
@@ -32,10 +32,10 @@ def generate_sprite(
     ----------
     n_iters : int
         Number of iterations to run Conway's Game of Life.
-    ext_rate : float (0.0 to 1.0)
+    extinction : float (0.0 to 1.0)
         Controls how many dead cells will stay dead on the next iteration
         Default is 0.125 (around 1 cell)
-    stasis_rate: float (0.0 to 1.0)
+    survival: float (0.0 to 1.0)
         Controls how many live cells will stay alive on the next iteration.
         Default is 0.375 (around 3 cells)
     size : int
@@ -64,8 +64,8 @@ def generate_sprite(
     sim.run(
         _custom_rule,
         iters=n_iters,
-        n_extinct=int(ext_rate * 8),
-        n_stasis=int(stasis_rate * 8),
+        n_extinct=int(extinction * 8),
+        n_survive=int(survival * 8),
     )
     fstate = sim.get_history()[-1]
 
@@ -97,12 +97,12 @@ def generate_sprite(
 
 
 def _custom_rule(
-    X: np.ndarray, n_extinct: int = 3, n_stasis: int = 3
+    X: np.ndarray, n_extinct: int = 3, n_survive: int = 3
 ) -> np.ndarray:
     """Custom Conway's Rule"""
     n = convolve2d(X, np.ones((3, 3)), mode="same", boundary="fill") - X
     reproduction_rule = (X == 0) & (n <= n_extinct)
-    stasis_rule = (X == 1) & ((n == 2) | (n == n_stasis))
+    stasis_rule = (X == 1) & ((n == 2) | (n == n_survive))
     return reproduction_rule | stasis_rule
 
 

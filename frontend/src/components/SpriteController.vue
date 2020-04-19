@@ -7,12 +7,12 @@
     </div>
 
     <div>
-      <label for="extRateControl">Extinction Rate</label>
+      <label for="extinctionControl">Extinction</label>
       <input
         type="range"
-        id="extRateControl"
+        id="extinctionControl"
         value="0.125"
-        v-model.number="spriteConfig.extRate"
+        v-model.number="spriteConfig.extinction"
         min="0"
         max="1"
         step="0.1"
@@ -20,12 +20,12 @@
     </div>
 
     <div>
-      <label for="stasisRateControl">Stasis Rate</label>
+      <label for="survivalControl">Survival</label>
       <input
         type="range"
-        id="stasisRateControl"
+        id="survivalControl"
         value="0.375"
-        v-model.number="spriteConfig.stasisRate"
+        v-model.number="spriteConfig.survival"
         min="0"
         max="1"
         step="0.1"
@@ -47,8 +47,8 @@ export default {
     return {
       spriteConfig: {
         q: null,
-        extRate: 0.125,
-        stasisRate: 0.375,
+        extinction: 0.125,
+        survival: 0.375,
       }
     };
   },
@@ -56,8 +56,8 @@ export default {
     setDefaults() {
       this.spriteConfig = {
         q: null,
-        extRate: 0.125,
-        stasisRate: 0.375,
+        extinction: 0.125,
+        survival: 0.375,
       };
     }
   },
