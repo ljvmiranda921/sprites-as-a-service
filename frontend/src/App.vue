@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <!-- TODO: Add header -->
+    <!-- TODO: Add subheader -->
     <SpriteDisplay :img="img" />
     <SpriteController @update-sprite="generateSprite($event)" />
     <SnippetDisplay :url="requesturl" />
@@ -37,7 +39,7 @@ export default {
       // we will always return null
       var queryPrefix = "?q=";
       var extRatePrefix = "&ext_rate=";
-      var queryText;
+      var queryText = spriteConfig.q;
       if (spriteConfig.q === null || spriteConfig.q == "") {
         queryPrefix = "";
         extRatePrefix = "?ext_rate=";
