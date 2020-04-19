@@ -55,7 +55,7 @@ export default {
   methods: {
     setDefaults() {
       this.spriteConfig = {
-        q: null,
+        q: "",
         extinction: 0.125,
         survival: 0.375,
       };
