@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       img: "",
+      baseurl: "http://localhost:8000/sprite",
       spriteConfig: {
         q: null,
         extRate: 0.125,
@@ -32,7 +33,7 @@ export default {
     },
     generateSprite(spriteConfig) {
       axios
-        .get("http://localhost:8000/sprite", {
+        .get(this.baseurl, {
           params: {
             q: spriteConfig.q,
             ext_rate: spriteConfig.extRate,
@@ -50,7 +51,7 @@ export default {
   created() {
     // Random sprite image is called every reload
     axios
-      .get("http://localhost:8000/sprite", {
+      .get(this.baseurl, {
           params: {
             size: 300
           }
