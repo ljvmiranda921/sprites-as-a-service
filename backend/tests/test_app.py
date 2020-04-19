@@ -8,6 +8,6 @@ client = TestClient(app)
 
 
 def test_make_sprite_default_values():
-    response = client.get("/sprite")
+    response = client.get("/api/v1/sprite")
     assert response.status_code == 200
     assert response.headers["content-type"] == "image/png"

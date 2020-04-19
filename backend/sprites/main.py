@@ -32,7 +32,7 @@ app.add_middleware(
 )
 
 
-@app.get("/sprite")
+@app.get("/api/v1/sprite")
 def make_sprite(
     q: str = None,
     n_iters: int = 1,

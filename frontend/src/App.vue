@@ -25,7 +25,7 @@ export default {
     return {
       img: "",
       requesturl: "",
-      baseurl: "http://localhost:8000/sprite",
+      baseurl: "http://localhost:8000/api/v1/sprite",
       spriteConfig: {
         q: null,
         extRate: 0.125,
