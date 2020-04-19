@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SpriteControllerRandom @random-sprite="setDefaults" />
+    <SpriteControllerButton @random-sprite="setDefaults" />
 
     <div>
       <input type="text" v-model.trim="spriteConfig.q" placeholder="Type anything!" />
@@ -35,12 +35,12 @@
 </template>
 
 <script>
-import SpriteControllerRandom from "./SpriteControllerRandom.vue";
+import SpriteControllerButton from "./SpriteControllerButton.vue";
 
 export default {
   name: "SpriteController",
   components: {
-    SpriteControllerRandom
+    SpriteControllerButton
   },
   data() {
     return {
