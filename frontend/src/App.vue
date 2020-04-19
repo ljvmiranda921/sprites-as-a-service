@@ -37,7 +37,7 @@ export default {
             q: spriteConfig.q,
             ext_rate: spriteConfig.extRate,
             stasis_rate: spriteConfig.stasisRate,
-            size: 320
+            size: 300
           }
         })
         .then(response => {
@@ -52,7 +52,7 @@ export default {
     axios
       .get("http://localhost:8000/sprite", {
           params: {
-            size: 320
+            size: 300
           }
       })
       .then(response => {
