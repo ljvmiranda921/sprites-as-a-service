@@ -5,6 +5,7 @@
     <SpriteController @update-sprite="generateSprite($event)" />
     <SnippetDisplay :url="requesturl" />
     <TechnicalNotes />
+    <BaseFooter />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import SpriteDisplay from "./components/SpriteDisplay"
 import SpriteController from "./components/SpriteController"
 import SnippetDisplay from "./components/SnippetDisplay"
 import TechnicalNotes from "./components/TechnicalNotes"
+import BaseFooter from "./components/BaseFooter"
 import axios from "axios"
 
 export default {
@@ -23,7 +25,8 @@ export default {
     SpriteDisplay,
     SpriteController,
     SnippetDisplay,
-    TechnicalNotes
+    TechnicalNotes,
+    BaseFooter
   },
   data() {
     return {
