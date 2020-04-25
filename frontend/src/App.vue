@@ -116,6 +116,7 @@ export default {
 
 .wrapper div {
   margin: 10px;
+  text-align: left;
 }
 
 .left {
