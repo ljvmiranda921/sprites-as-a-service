@@ -32,16 +32,19 @@
       />
     </div>
     <!-- TODO: Add call to action: "Like it? Love it? Leave us a Star on Github"-->
+    <SpriteControllerCTA />
   </div>
 </template>
 
 <script>
-import SpriteControllerButton from "./SpriteControllerButton.vue";
+import SpriteControllerButton from "./SpriteControllerButton"
+import SpriteControllerCTA from "./SpriteControllerCTA"
 
 export default {
   name: "SpriteController",
   components: {
-    SpriteControllerButton
+    SpriteControllerButton,
+    SpriteControllerCTA
   },
   data() {
     return {
@@ -50,7 +53,7 @@ export default {
         extinction: 0.125,
         survival: 0.375,
       }
-    };
+    }
   },
   methods: {
     setDefaults() {
@@ -58,18 +61,18 @@ export default {
         q: "",
         extinction: 0.125,
         survival: 0.375,
-      };
+      }
     }
   },
   watch: {
     spriteConfig: {
       deep: true,
       handler() {
-        this.$emit("update-sprite", this.spriteConfig);
+        this.$emit("update-sprite", this.spriteConfig)
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>

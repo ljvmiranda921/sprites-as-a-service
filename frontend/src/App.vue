@@ -1,25 +1,32 @@
 <template>
   <div id="app">
-    <!-- TODO: Add header -->
-    <!-- TODO: Add subheader -->
+    <TheHeroHeader />
     <SpriteDisplay :img="img" />
     <SpriteController @update-sprite="generateSprite($event)" />
     <SnippetDisplay :url="requesturl" />
+    <TechnicalNotes />
+    <BaseFooter />
   </div>
 </template>
 
 <script>
-import SpriteDisplay from "./components/SpriteDisplay.vue";
-import SpriteController from "./components/SpriteController";
-import SnippetDisplay from "./components/SnippetDisplay";
-import axios from "axios";
+import TheHeroHeader from "./components/TheHeroHeader"
+import SpriteDisplay from "./components/SpriteDisplay"
+import SpriteController from "./components/SpriteController"
+import SnippetDisplay from "./components/SnippetDisplay"
+import TechnicalNotes from "./components/TechnicalNotes"
+import BaseFooter from "./components/BaseFooter"
+import axios from "axios"
 
 export default {
   name: "App",
   components: {
+    TheHeroHeader,
     SpriteDisplay,
     SpriteController,
-    SnippetDisplay
+    SnippetDisplay,
+    TechnicalNotes,
+    BaseFooter
   },
   data() {
     return {
@@ -31,18 +38,18 @@ export default {
         extinction: 0.125,
         survival: 0.375,
       }
-    };
+    }
   },
   methods: {
     generateSprite(spriteConfig) {
       // Whether spriteConfig.q is null or an empty string,
       // we will always return null
-      var queryPrefix = "?q=";
-      var extinctionPrefix = "&extinction=";
-      var queryText = spriteConfig.q;
+      var queryPrefix = "?q="
+      var extinctionPrefix = "&extinction="
+      var queryText = spriteConfig.q
       if (spriteConfig.q === null || spriteConfig.q == "") {
-        queryPrefix = "";
-        extinctionPrefix = "?extinction=";
+        queryPrefix = ""
+        extinctionPrefix = "?extinction="
         queryText = null
       }
       axios
@@ -55,15 +62,15 @@ export default {
           }
         })
         .then(response => {
-          console.log("response", response.statusText);
-          this.img = response.data;
+          console.log("response", response.statusText)
+          this.img = response.data
           this.requesturl = (this.baseurl
                           + queryPrefix + spriteConfig.q
                           + extinctionPrefix + spriteConfig.extinction
                           + "&survival=" + spriteConfig.survival
-                          + "&size=" + 300);
+                          + "&size=" + 300)
         })
-        .catch(error => console.log("error.response", error));
+        .catch(error => console.log("error.response", error))
     }
   },
   created() {
@@ -75,13 +82,13 @@ export default {
           }
       })
       .then(response => {
-        console.log("response", response.statusText);
-        this.img = response.data;
-        this.requesturl = this.baseurl;
+        console.log("response", response.statusText)
+        this.img = response.data
+        this.requesturl = this.baseurl
       })
-      .catch(error => console.log("error.response", error));
+      .catch(error => console.log("error.response", error))
   }
-};
+}
 </script>
 
 <style>

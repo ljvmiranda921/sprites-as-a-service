@@ -1,20 +1,24 @@
 <template>
   <div> 
     <p>curl -X GET {{ url }}</p>
-    <!-- TODO: Add parameter description table -->
     <SnippetDisplayLang :url="url"/>
-    <!-- TODO: Add call to action: "See more in the documentation" -->
+    <SnippetDisplayDocs />
+    <SnippetDisplayCTA />
   </div>
 </template>
 
 <script>
 import SnippetDisplayLang from "./SnippetDisplayLang"
+import SnippetDisplayDocs from "./SnippetDisplayDocs"
+import SnippetDisplayCTA from "./SnippetDisplayCTA"
 
 export default {
   name: "SnippetDisplay",
   props: ["url"],
   components: {
-    SnippetDisplayLang
+    SnippetDisplayLang,
+    SnippetDisplayDocs,
+    SnippetDisplayCTA
   }
 }
 </script>
