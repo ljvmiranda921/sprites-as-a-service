@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import SpriteControllerButton from "./SpriteControllerButton";
-import SpriteControllerCTA from "./SpriteControllerCTA";
+import SpriteControllerButton from "./SpriteControllerButton"
+import SpriteControllerCTA from "./SpriteControllerCTA"
 
 export default {
   name: "SpriteController",
@@ -53,7 +53,7 @@ export default {
         extinction: 0.125,
         survival: 0.375,
       }
-    };
+    }
   },
   methods: {
     setDefaults() {
@@ -61,18 +61,18 @@ export default {
         q: "",
         extinction: 0.125,
         survival: 0.375,
-      };
+      }
     }
   },
   watch: {
     spriteConfig: {
       deep: true,
       handler() {
-        this.$emit("update-sprite", this.spriteConfig);
+        this.$emit("update-sprite", this.spriteConfig)
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>

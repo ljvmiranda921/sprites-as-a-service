@@ -10,7 +10,7 @@ export default {
   name: "SpriteControllerRandom",
   methods: {
     randomSprite() {
-      this.$emit("random-sprite");
+      this.$emit("random-sprite")
     }
   }
 };
