@@ -105,4 +105,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#wrapper {
+  display: flex;
+}
+
+#left {
+  flex: 0 0 50%;
+}
+
+#right {
+  flex: 1;
+}
 </style>
