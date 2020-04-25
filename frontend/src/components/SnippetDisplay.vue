@@ -1,23 +1,23 @@
 <template>
   <div> 
     <p>curl -X GET {{ url }}</p>
-    <SnippetDisplayDocs />
     <SnippetDisplayLang :url="url"/>
+    <SnippetDisplayDocs />
     <SnippetDisplayCTA />
   </div>
 </template>
 
 <script>
-import SnippetDisplayDocs from "./SnippetDisplayDocs"
 import SnippetDisplayLang from "./SnippetDisplayLang"
+import SnippetDisplayDocs from "./SnippetDisplayDocs"
 import SnippetDisplayCTA from "./SnippetDisplayCTA"
 
 export default {
   name: "SnippetDisplay",
   props: ["url"],
   components: {
-    SnippetDisplayDocs,
     SnippetDisplayLang,
+    SnippetDisplayDocs,
     SnippetDisplayCTA
   }
 }
