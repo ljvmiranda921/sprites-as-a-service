@@ -4,18 +4,15 @@
   </div>
 </template>
 
-
 <script>
 export default {
   name: "SpriteControllerRandom",
   methods: {
     randomSprite() {
-      this.$emit("random-sprite")
-    }
-  }
+      this.$emit("random-sprite");
+    },
+  },
 };
 </script>
 
-
-<style scoped>
-</style>
+<style scoped></style>

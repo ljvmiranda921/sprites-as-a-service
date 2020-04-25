@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import TheHeroHeader from "./components/TheHeroHeader"
-import SpriteDisplay from "./components/SpriteDisplay"
-import SpriteController from "./components/SpriteController"
-import SnippetDisplay from "./components/SnippetDisplay"
-import TechnicalNotes from "./components/TechnicalNotes"
-import BaseFooter from "./components/BaseFooter"
-import axios from "axios"
+import TheHeroHeader from "./components/TheHeroHeader";
+import SpriteDisplay from "./components/SpriteDisplay";
+import SpriteController from "./components/SpriteController";
+import SnippetDisplay from "./components/SnippetDisplay";
+import TechnicalNotes from "./components/TechnicalNotes";
+import BaseFooter from "./components/BaseFooter";
+import axios from "axios";
 
 export default {
   name: "App",
@@ -26,7 +26,7 @@ export default {
     SpriteController,
     SnippetDisplay,
     TechnicalNotes,
-    BaseFooter
+    BaseFooter,
   },
   data() {
     return {
@@ -37,20 +37,20 @@ export default {
         q: null,
         extinction: 0.125,
         survival: 0.375,
-      }
-    }
+      },
+    };
   },
   methods: {
     generateSprite(spriteConfig) {
       // Whether spriteConfig.q is null or an empty string,
       // we will always return null
-      var queryPrefix = "?q="
-      var extinctionPrefix = "&extinction="
-      var queryText = spriteConfig.q
+      var queryPrefix = "?q=";
+      var extinctionPrefix = "&extinction=";
+      var queryText = spriteConfig.q;
       if (spriteConfig.q === null || spriteConfig.q == "") {
-        queryPrefix = ""
-        extinctionPrefix = "?extinction="
-        queryText = null
+        queryPrefix = "";
+        extinctionPrefix = "?extinction=";
+        queryText = null;
       }
       axios
         .get(this.baseurl, {
@@ -58,37 +58,42 @@ export default {
             q: queryText,
             extinction: spriteConfig.extinction,
             survival: spriteConfig.survival,
-            size: 300
-          }
+            size: 300,
+          },
         })
-        .then(response => {
-          console.log("response", response.statusText)
-          this.img = response.data
-          this.requesturl = (this.baseurl
-                          + queryPrefix + spriteConfig.q
-                          + extinctionPrefix + spriteConfig.extinction
-                          + "&survival=" + spriteConfig.survival
-                          + "&size=" + 300)
+        .then((response) => {
+          console.log("response", response.statusText);
+          this.img = response.data;
+          this.requesturl =
+            this.baseurl +
+            queryPrefix +
+            spriteConfig.q +
+            extinctionPrefix +
+            spriteConfig.extinction +
+            "&survival=" +
+            spriteConfig.survival +
+            "&size=" +
+            300;
         })
-        .catch(error => console.log("error.response", error))
-    }
+        .catch((error) => console.log("error.response", error));
+    },
   },
   created() {
     // Random sprite image is called every reload
     axios
       .get(this.baseurl, {
-          params: {
-            size: 300
-          }
+        params: {
+          size: 300,
+        },
       })
-      .then(response => {
-        console.log("response", response.statusText)
-        this.img = response.data
-        this.requesturl = this.baseurl
+      .then((response) => {
+        console.log("response", response.statusText);
+        this.img = response.data;
+        this.requesturl = this.baseurl;
       })
-      .catch(error => console.log("error.response", error))
-  }
-}
+      .catch((error) => console.log("error.response", error));
+  },
+};
 </script>
 
 <style>

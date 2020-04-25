@@ -4,19 +4,15 @@
   </div>
 </template>
 
-
 <script>
-import BaseFooterSocial from "./BaseFooterSocial"
+import BaseFooterSocial from "./BaseFooterSocial";
 
 export default {
-  name: "BaseFooter",  
+  name: "BaseFooter",
   components: {
-    BaseFooterSocial
-  }
-}
+    BaseFooterSocial,
+  },
+};
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>

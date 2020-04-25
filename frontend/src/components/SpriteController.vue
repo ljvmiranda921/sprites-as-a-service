@@ -3,7 +3,11 @@
     <SpriteControllerButton @random-sprite="setDefaults" />
 
     <div>
-      <input type="text" v-model.trim="spriteConfig.q" placeholder="Type anything!" />
+      <input
+        type="text"
+        v-model.trim="spriteConfig.q"
+        placeholder="Type anything!"
+      />
     </div>
 
     <div>
@@ -37,14 +41,14 @@
 </template>
 
 <script>
-import SpriteControllerButton from "./SpriteControllerButton"
-import SpriteControllerCTA from "./SpriteControllerCTA"
+import SpriteControllerButton from "./SpriteControllerButton";
+import SpriteControllerCTA from "./SpriteControllerCTA";
 
 export default {
   name: "SpriteController",
   components: {
     SpriteControllerButton,
-    SpriteControllerCTA
+    SpriteControllerCTA,
   },
   data() {
     return {
@@ -52,8 +56,8 @@ export default {
         q: null,
         extinction: 0.125,
         survival: 0.375,
-      }
-    }
+      },
+    };
   },
   methods: {
     setDefaults() {
@@ -61,19 +65,18 @@ export default {
         q: "",
         extinction: 0.125,
         survival: 0.375,
-      }
-    }
+      };
+    },
   },
   watch: {
     spriteConfig: {
       deep: true,
       handler() {
-        this.$emit("update-sprite", this.spriteConfig)
-      }
-    }
-  }
-}
+        this.$emit("update-sprite", this.spriteConfig);
+      },
+    },
+  },
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,16 +1,16 @@
 <template>
-  <div> 
+  <div>
     <p>curl -X GET {{ url }}</p>
-    <SnippetDisplayLang :url="url"/>
+    <SnippetDisplayLang :url="url" />
     <SnippetDisplayDocs />
     <SnippetDisplayCTA />
   </div>
 </template>
 
 <script>
-import SnippetDisplayLang from "./SnippetDisplayLang"
-import SnippetDisplayDocs from "./SnippetDisplayDocs"
-import SnippetDisplayCTA from "./SnippetDisplayCTA"
+import SnippetDisplayLang from "./SnippetDisplayLang";
+import SnippetDisplayDocs from "./SnippetDisplayDocs";
+import SnippetDisplayCTA from "./SnippetDisplayCTA";
 
 export default {
   name: "SnippetDisplay",
@@ -18,12 +18,9 @@ export default {
   components: {
     SnippetDisplayLang,
     SnippetDisplayDocs,
-    SnippetDisplayCTA
-  }
-}
+    SnippetDisplayCTA,
+  },
+};
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
