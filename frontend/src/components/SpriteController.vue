@@ -32,16 +32,19 @@
       />
     </div>
     <!-- TODO: Add call to action: "Like it? Love it? Leave us a Star on Github"-->
+    <SpriteControllerCTA />
   </div>
 </template>
 
 <script>
-import SpriteControllerButton from "./SpriteControllerButton.vue";
+import SpriteControllerButton from "./SpriteControllerButton";
+import SpriteControllerCTA from "./SpriteControllerCTA";
 
 export default {
   name: "SpriteController",
   components: {
-    SpriteControllerButton
+    SpriteControllerButton,
+    SpriteControllerCTA
   },
   data() {
     return {
