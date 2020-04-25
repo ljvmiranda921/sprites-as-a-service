@@ -2,17 +2,19 @@
   <div>
     <h3>Cool stuff! Can I use this for my game or app?</h3>
     <p>
-      Of course! Sprite-as-a-Service is dual-licensed: the source code is MIT,
-      while the generated sprites are under the Creative Commons Attribution 4.0
-      (CC BY 4.0). However, please support me and this work by:
+      Feel free! Sprite-as-a-Service is open-source with a dual-license: the
+      source code is MIT, while the generated sprites are under the Creative
+      Commons Attribution 4.0 (CC BY 4.0). It's highly-permissive, so please
+      support me by:
     </p>
     <ul>
       <li>
-        Attributing and notifying me on Github when you're using this service.
+        Acknowledging this project and notifying me if you're using this
+        service.
       </li>
-      <li>Contributing back and leaving a star on Github!</li>
+      <li><b>Leaving a star</b> or contributing back on Github!</li>
       <li>
-        Helping me maintain server costs, buy me a coffee!
+        Helping me maintain server costs&mdash;buy me a coffee!
       </li>
     </ul>
   </div>
