@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <!-- TODO: Add header -->
-    <!-- TODO: Add subheader -->
+    <TheHeroHeader />
     <SpriteDisplay :img="img" />
     <SpriteController @update-sprite="generateSprite($event)" />
     <SnippetDisplay :url="requesturl" />
@@ -9,7 +8,8 @@
 </template>
 
 <script>
-import SpriteDisplay from "./components/SpriteDisplay.vue";
+import TheHeroHeader from "./components/TheHeroHeader"
+import SpriteDisplay from "./components/SpriteDisplay";
 import SpriteController from "./components/SpriteController";
 import SnippetDisplay from "./components/SnippetDisplay";
 import axios from "axios";
@@ -17,6 +17,7 @@ import axios from "axios";
 export default {
   name: "App",
   components: {
+    TheHeroHeader,
     SpriteDisplay,
     SpriteController,
     SnippetDisplay
