@@ -11,7 +11,7 @@
       </button>
       <button class="tablinks" @click="openLang(event, 'Go')">Go</button>
       <button class="tablinks" @click="openLang(event, 'Javascript')">
-        Javascript (Node)
+        NodeJS
       </button>
     </div>
 
@@ -86,6 +86,7 @@ export default {
 /* Style the tab content */
 .tabcontent {
   display: none;
+  height: 125px;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;

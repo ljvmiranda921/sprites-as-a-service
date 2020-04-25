@@ -1,8 +1,10 @@
 <template>
   <div>
     <p>curl -X GET {{ url }}</p>
-    <SnippetDisplayLang :url="url" />
-    <SnippetDisplayDocs />
+    <div class="wrapper">
+      <div class="left"><SnippetDisplayLang :url="url" /></div>
+      <div class="right"><SnippetDisplayDocs /></div>
+    </div>
     <SnippetDisplayCTA />
   </div>
 </template>

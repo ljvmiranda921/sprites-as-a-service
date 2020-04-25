@@ -1,13 +1,19 @@
 <template>
   <div>
+    <h3>Cool stuff! Can I use this for my game or app?</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
-      rhoncus nisi, sit amet tempus diam. Curabitur a justo sem. Ut commodo
-      malesuada lorem, in gravida metus molestie et. Etiam porta viverra
-      pretium. Nulla et feugiat lacus. Praesent varius eros a tortor
-      scelerisque, pretium auctor tortor hendrerit. Fusce non pellentesque
-      velit.
+      Of course! Sprite-as-a-Service is dual-licensed: the source code is MIT,
+      while the generated sprites are under the Creative Commons Attribution
+      4.0 (CC BY 4.0). However, please support me and this work by:
     </p>
+    <ul>
+      <li>Attributing and notifying me on Github when you're using this
+        service.</li>
+      <li>Contributing back and leaving a star on Github!</li>
+      <li>
+        Helping me maintain server costs, buy me a coffee!
+      </li>
+    </ul>
   </div>
 </template>
 

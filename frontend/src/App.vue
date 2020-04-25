@@ -104,5 +104,26 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 80%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+.wrapper div {
+  margin: 10px;
+  text-align: left;
+}
+
+.left {
+  flex: 0 0 50%;
+}
+
+.right {
+  flex: 1;
 }
 </style>

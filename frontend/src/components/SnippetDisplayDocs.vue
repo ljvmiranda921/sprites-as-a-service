@@ -1,10 +1,9 @@
 <template>
   <div>
+    <h3>Available Parameters</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed ligula
-      at ante blandit tincidunt vitae lacinia nulla. Nulla vulputate aliquet
-      laoreet. Phasellus id augue turpis. Nullam volutpat laoreet lacus, commodo
-      consectetur ex lacinia a.
+      at ante blandit tincidunt vitae lacinia nulla.
     </p>
     <ul>
       <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
