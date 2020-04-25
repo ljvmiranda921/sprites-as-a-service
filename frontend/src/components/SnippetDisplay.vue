@@ -1,9 +1,9 @@
 <template>
   <div>
     <p>curl -X GET {{ url }}</p>
-    <div id="wrapper">
-      <div id="left"><SnippetDisplayLang :url="url" /></div>
-      <div id="right"><SnippetDisplayDocs /></div>
+    <div class="wrapper">
+      <div class="left"><SnippetDisplayLang :url="url" /></div>
+      <div class="right"><SnippetDisplayDocs /></div>
     </div>
     <SnippetDisplayCTA />
   </div>

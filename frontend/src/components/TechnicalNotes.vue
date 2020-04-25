@@ -1,7 +1,7 @@
 <template>
-  <div id="wrapper">
-    <div id="left"><TechnicalNotesLicensing /></div>
-    <div id="right"><TechnicalNotesChangelog /></div>
+  <div class="wrapper">
+    <div class="left"><TechnicalNotesLicensing /></div>
+    <div class="right"><TechnicalNotesChangelog /></div>
   </div>
 </template>
 

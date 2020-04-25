@@ -104,17 +104,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 960px;
+  margin: auto;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
 }
 
-#left {
+.left {
   flex: 0 0 50%;
 }
 
-#right {
+.right {
   flex: 1;
 }
 </style>
