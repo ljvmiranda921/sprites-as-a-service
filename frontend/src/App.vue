@@ -108,8 +108,14 @@ export default {
   margin: auto;
 }
 
-.wrapper {
-  display: flex;
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+.wrapper div {
+  margin: 10px;
 }
 
 .left {
