@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Changelog</h4>
+    <h3>Changelog</h3>
     <ul>
       <li>
         Quisque nec nibh sollicitudin, fermentum neque nec, efficitur dolor.

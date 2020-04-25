@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>This is cool! Can I use it on my stuff?</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
       rhoncus nisi, sit amet tempus diam. Curabitur a justo sem. Ut commodo

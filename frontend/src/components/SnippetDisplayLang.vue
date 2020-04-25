@@ -11,7 +11,7 @@
       </button>
       <button class="tablinks" @click="openLang(event, 'Go')">Go</button>
       <button class="tablinks" @click="openLang(event, 'Javascript')">
-        Javascript (Node)
+        NodeJS
       </button>
     </div>
 
