@@ -2,22 +2,26 @@
   <div>
     <h3>Available Parameters</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed ligula
-      at ante blandit tincidunt vitae lacinia nulla.
+      Here are all parameters you can use to control how your sprites will look
+      like (v1)!
     </p>
     <ul>
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
       <li>
-        Integer aliquet libero ut purus tempor, sed congue lorem vehicula.
-      </li>
-      <li>Sed sit amet est non turpis tempor pellentesque vel vitae dolor.</li>
-      <li>
-        Suspendisse eu mauris vulputate, sagittis ante vel, finibus tortor.
+        <b>q:</b> query string, generates a unique sprite for any value (string)
       </li>
       <li>
-        In dapibus metus vitae tellus venenatis, quis laoreet quam faucibus.
+        <b>n_iters:</b> controls the number of iterations to run the automata
+        (integer)
       </li>
-      <li>Phasellus laoreet leo at odio rutrum congue.</li>
+      <li>
+        <b>extinction:</b> controls how many dead cells will stay dead (float,
+        0-1)
+      </li>
+      <li>
+        <b>survival:</b> controls how many live cells will stay alive (float,
+        0-1)
+      </li>
+      <li><b>size:</b> size of the image, in pixels (integer)</li>
     </ul>
   </div>
 </template>

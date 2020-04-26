@@ -16,9 +16,53 @@
     </div>
 
     <!-- Tab content-->
-    <div id="Python" class="tabcontent">Python {{ url }}</div>
-    <div id="Go" class="tabcontent">Go {{ url }}</div>
-    <div id="Javascript" class="tabcontent">Javascript {{ url }}</div>
+    <div id="Python" class="tabcontent">
+      <pre>
+        <code>
+          import requests  
+
+          def main():
+            response = requests.get("{{ url }}")
+
+          if __name__ == "__main__":
+            main()
+        </code>
+      </pre>
+    </div>
+    <div id="Go" class="tabcontent">
+      <pre>
+        <code>
+          package main
+
+          import (
+            "net/http"
+            "log"
+          )
+
+          func main() {
+              resp, err := http.Get("{{ url }}")
+              if err != nil {
+                  log.Fatal(err)
+              }
+          }
+        </code>
+      </pre>
+    </div>
+    <div id="Javascript" class="tabcontent">
+      <pre>
+        <code>
+          const https = require("https");
+
+          https.get("{{ url }}", (resp) => {
+              let data = "";
+
+              resp.on("data", (chunk) => {
+                  data += chunk;
+              });
+          })
+        </code>
+      </pre>
+    </div>
   </div>
 </template>
 
@@ -86,7 +130,7 @@ export default {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  height: 125px;
+  height: 300px;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
@@ -104,5 +148,13 @@ export default {
   to {
     opacity: 1;
   }
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 </style>
