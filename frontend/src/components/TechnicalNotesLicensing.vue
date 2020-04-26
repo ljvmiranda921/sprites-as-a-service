@@ -14,9 +14,9 @@
         Acknowledging this project and notifying me if you're using this
         service.
       </li>
-      <li><b>Leaving a star</b> or contributing back on Github!</li>
+      <li><a href="https://github.com/ljvmiranda921/sprite-as-a-service"><b>Leaving a star</b></a> or contributing back on Github!</li>
       <li>
-        Helping me maintain server costs&mdash;buy me a coffee!
+        Helping me maintain server costs&mdash;<a href="https://www.buymeacoffee.com/ljvmiranda921">buy me a coffee!</a>
       </li>
     </ul>
   </div>
