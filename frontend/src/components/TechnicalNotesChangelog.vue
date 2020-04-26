@@ -2,8 +2,7 @@
   <div>
     <h3>Changelog</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
-      rhoncus nisi, sit amet tempus diam. Curabitur a justo sem. Ut commodo
+      List of changes for the current version:
     </p>
     <ul>
       <li>
