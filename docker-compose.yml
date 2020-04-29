@@ -1,0 +1,16 @@
+version: "3"
+services:
+    backend:
+        image: "sprites-backend"
+        build:
+            context: backend/
+            dockerfile: Dockerfile
+        ports:
+            - "8000:8000"
+    frontend:
+        image: "sprites-frontend"
+        build:
+            context: frontend/
+            dockerfile: Dockerfile
+        ports:
+            - "8080:80"
