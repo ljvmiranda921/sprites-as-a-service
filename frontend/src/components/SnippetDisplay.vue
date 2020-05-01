@@ -27,9 +27,6 @@ export default {
 
 <style scoped>
 
-.section-title {
-  color: #ffa300;
-}
 
 .curl-container {
   background-color: #000;

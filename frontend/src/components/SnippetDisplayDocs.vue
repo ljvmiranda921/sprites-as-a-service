@@ -2,9 +2,9 @@
   <div>
     <h4>Parameters</h4>
     <p>
-      Here are all parameters you can use to control how your sprites will look
-      like (v1)!
+      Control the appearance of your sprites using these parameters!
     </p>
+    <div>
     <ul>
       <li>
         <b>q:</b> query string, generates a unique sprite for any value (string)
@@ -23,6 +23,7 @@
       </li>
       <li><b>size:</b> size of the image, in pixels (integer)</li>
     </ul>
+    </div>
   </div>
 </template>
 

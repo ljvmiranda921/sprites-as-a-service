@@ -175,4 +175,8 @@ a:link {
 .right {
   flex: 1;
 }
+
+.section-title {
+  color: #ffa300;
+}
 </style>
