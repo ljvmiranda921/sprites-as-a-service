@@ -2,17 +2,17 @@
   <div>
     <SpriteControllerButton @random-sprite="setDefaults" />
 
-    <div>
-      <h4 id="options-header">More Options</h4>
-      <div class="nes-field sprite-field">
-        <input
-          type="text"
-          v-model.trim="spriteConfig.q"
-          placeholder="Type anything!"
-        />
-      </div>
+    <h4 id="options-header">More Options</h4>
+    <div class="sprite-field">
+      <input
+        type="text"
+        v-model.trim="spriteConfig.q"
+        placeholder="Type here!"
+      />
+    </div>
 
-      <div>
+    <div>
+      <div class="sprite-range">
         <label for="extinctionControl">Extinction</label>
         <input
           type="range"
@@ -25,7 +25,7 @@
         />
       </div>
 
-      <div>
+      <div class="sprite-range">
         <label for="survivalControl">Survival</label>
         <input
           type="range"
@@ -83,14 +83,74 @@ export default {
 
 <style scoped>
 
-.sprite-field {
-  font-size: 14pt;  
-  padding: 10px;
-}
-
 #options-header {
   color: #29adff;
 }
 
+.sprite-field {
+  font-size: 14pt;
+  padding: 10px;
+}
+
+input {
+  font-family: "Press Start 2P", cursive;
+}
+
+input[type='text'] {
+  width: 60%;
+}
+
+input[type='range'] {
+  padding-left: 10px;
+}
+
+label {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px
+}
+
+.sprite-range {
+  padding: 5px;
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: transparent;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #00e436;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #434343;
+      box-shadow: -80px 0 0 80px #00e436;
+    }
+
+}
+/* FF */
+input[type="range"]::-moz-range-progress {
+  background-color: #00e436; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #c2c3c7;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #00e436; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #c2c3c7;
+}
 
 </style>

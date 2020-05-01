@@ -1,10 +1,14 @@
 <template>
-  <div>
-    <h3>
-      Like it? Love it? Leave us a Star on
+  <div class="container">
+    <h4>
+      Leave us a Star on
       <a href="https://github.com/ljvmiranda921/sprite-as-a-service">Github!</a>
-    </h3>
+    </h4>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  padding: 20px;
+}
+</style>

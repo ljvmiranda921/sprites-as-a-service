@@ -27,7 +27,6 @@ export default {
   margin-bottom: 40px;
 }
 */
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 .retro-btn {
   text-align: center;

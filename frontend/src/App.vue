@@ -103,6 +103,13 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+h1, h2, h3, h4 {
+  font-family: "Press Start 2P", cursive;
+}
+
+
 #container {
   background: #1d2b53;
   padding: 10px;

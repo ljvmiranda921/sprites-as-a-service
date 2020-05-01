@@ -17,6 +17,9 @@ export default {
 .display {
   margin-top: 50px;
   margin-bottom: 20px;
+  border-color: #c2c3c7;
+  border-style: solid;
+  border-width: 5px;
 }
 
 
