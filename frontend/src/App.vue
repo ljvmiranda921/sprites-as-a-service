@@ -1,11 +1,14 @@
 <template>
-  <div id="app">
-    <TheHeroHeader />
-    <SpriteDisplay :img="img" />
-    <SpriteController @update-sprite="generateSprite($event)" />
-    <SnippetDisplay :url="requesturl" />
-    <TechnicalNotes />
-    <BaseFooter />
+  <div id="container">
+    <div id="app">
+      <TheHeroHeader />
+      <SpriteDisplay :img="img" />
+      <SpriteController @update-sprite="generateSprite($event)" />
+      <div class="pattern-dots-sm slategray h-5" />
+      <SnippetDisplay :url="requesturl" />
+      <TechnicalNotes />
+      <BaseFooter />
+    </div>
   </div>
 </template>
 
@@ -39,6 +42,21 @@ export default {
         survival: 0.375,
       },
     };
+  },
+  created() {
+    // Random sprite image is called every reload
+    axios
+      .get(this.baseurl, {
+        params: {
+          size: 300,
+        },
+      })
+      .then((response) => {
+        console.log("response", response.statusText);
+        this.img = response.data;
+        this.requesturl = this.baseurl;
+      })
+      .catch((error) => console.log("error.response", error));
   },
   methods: {
     generateSprite(spriteConfig) {
@@ -78,34 +96,37 @@ export default {
         .catch((error) => console.log("error.response", error));
     },
   },
-  created() {
-    // Random sprite image is called every reload
-    axios
-      .get(this.baseurl, {
-        params: {
-          size: 300,
-        },
-      })
-      .then((response) => {
-        console.log("response", response.statusText);
-        this.img = response.data;
-        this.requesturl = this.baseurl;
-      })
-      .catch((error) => console.log("error.response", error));
-  },
 };
 </script>
 
 <style>
+#container {
+  background: #1d2b53;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+
+
 #app {
+  /* Fonts and smoothing */
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Text design */
   text-align: center;
-  color: #2c3e50;
+  color: #fff1e8;
+  
+  /* Padding and margins */
   margin-top: 60px;
   width: 80%;
   margin: auto;
+
+  /* Colors */
 }
 
 @media (min-width: 768px) {
