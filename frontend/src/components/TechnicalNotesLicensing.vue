@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Licensing</h4>
+    <h4><i class="nes-icon heart"/> Licensing</h4>
     <p>
       Sprites-as-a-service is open-source under a dual-license: the code is
       <a href="https://opensource.org/licenses/MIT">MIT</a>, and the sprites are

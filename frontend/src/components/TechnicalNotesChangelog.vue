@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Changelog</h4>
+    <h4><i class="nes-icon github"/> Changelog</h4>
     <p>
       This is the initial release of Sprites-as-a-service:
     </p>
