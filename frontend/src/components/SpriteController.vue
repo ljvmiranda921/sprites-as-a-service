@@ -13,7 +13,10 @@
 
     <div>
       <div class="sprite-range">
-        <label for="extinctionControl">Extinction</label>
+        <div class="tooltip">
+          <label for="extinctionControl">Extinction</label>
+          <span class="tooltiptext" >Controls how many dead cells will stay dead</span>
+        </div>
         <input
           type="range"
           id="extinctionControl"
@@ -26,7 +29,10 @@
       </div>
 
       <div class="sprite-range">
-        <label for="survivalControl">Survival</label>
+        <div class="tooltip">
+          <label for="survivalControl">Survival</label>
+          <span class="tooltiptext" >Controls how many living cells will stay alive</span>
+        </div>
         <input
           type="range"
           id="survivalControl"
@@ -82,11 +88,9 @@ export default {
 </script>
 
 <style scoped>
-
 #options-header {
   color: #29adff;
 }
-
 
 input {
   font-family: "Press Start 2P", cursive;
@@ -94,23 +98,23 @@ input {
 
 .text-container {
   width: 70%;
-  display:inline-block;
+  display: inline-block;
   margin: 15px;
 }
 
-input[type='text'] {
+input[type="text"] {
   width: 100%;
   font-size: 12pt;
   text-align: center;
 }
 
-input[type='range'] {
+input[type="range"] {
   padding-left: 10px;
 }
 
 label {
   font-family: "Press Start 2P", cursive;
-  font-size: 20px
+  font-size: 20px;
 }
 
 .sprite-range {
@@ -118,44 +122,72 @@ label {
 }
 
 /*Chrome*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type='range'] {
-      overflow: hidden;
-      -webkit-appearance: none;
-      background-color: transparent;
-    }
-    
-    input[type='range']::-webkit-slider-runnable-track {
-      height: 10px;
-      -webkit-appearance: none;
-      color: #c2c3c7;
-      margin-top: -1px;
-      background-color: #c2c3c7;
-    }
-    
-    input[type='range']::-webkit-slider-thumb {
-      width: 10px;
-      -webkit-appearance: none;
-      height: 10px;
-      cursor: ew-resize;
-      background: #5f574f;
-      box-shadow: -80px 0 0 80px #00e436;
-    }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: transparent;
+  }
 
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #c2c3c7;
+    margin-top: -1px;
+    background-color: #c2c3c7;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #5f574f;
+    box-shadow: -80px 0 0 80px #00e436;
+  }
 }
 /* FF */
 input[type="range"]::-moz-range-progress {
-  background-color: #00e436; 
+  background-color: #00e436;
 }
-input[type="range"]::-moz-range-track {  
+input[type="range"]::-moz-range-track {
   background-color: #c2c3c7;
 }
 /* IE*/
 input[type="range"]::-ms-fill-lower {
-  background-color: #00e436; 
+  background-color: #00e436;
 }
-input[type="range"]::-ms-fill-upper {  
+input[type="range"]::-ms-fill-upper {
   background-color: #c2c3c7;
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 3px dotted #fff1e8; 
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 </style>
