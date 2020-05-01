@@ -59,6 +59,14 @@ export default {
       },
     };
   },
+  watch: {
+    spriteConfig: {
+      deep: true,
+      handler() {
+        this.$emit("update-sprite", this.spriteConfig);
+      },
+    },
+  },
   methods: {
     setDefaults() {
       this.spriteConfig = {
@@ -68,15 +76,15 @@ export default {
       };
     },
   },
-  watch: {
-    spriteConfig: {
-      deep: true,
-      handler() {
-        this.$emit("update-sprite", this.spriteConfig);
-      },
-    },
-  },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.button-wrapper {
+  padding: 20px;
+}
+
+
+
+</style>

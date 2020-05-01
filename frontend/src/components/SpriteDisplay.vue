@@ -15,7 +15,8 @@ export default {
 
 <style scoped>
 .display {
-  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 
