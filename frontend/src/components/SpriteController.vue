@@ -2,8 +2,8 @@
   <div>
     <SpriteControllerButton @random-sprite="setDefaults" />
 
-    <h4 id="options-header">Options</h4>
-    <div class="sprite-field">
+    <h4 id="options-header">Or make your own unique sprite!</h4>
+    <div class="text-container">
       <input
         type="text"
         v-model.trim="spriteConfig.q"
@@ -87,17 +87,21 @@ export default {
   color: #29adff;
 }
 
-.sprite-field {
-  font-size: 14pt;
-  padding: 10px;
-}
 
 input {
   font-family: "Press Start 2P", cursive;
 }
 
+.text-container {
+  width: 70%;
+  display:inline-block;
+  margin: 15px;
+}
+
 input[type='text'] {
-  width: 80%;
+  width: 100%;
+  font-size: 12pt;
+  text-align: center;
 }
 
 input[type='range'] {
