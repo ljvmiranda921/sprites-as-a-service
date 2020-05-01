@@ -4,8 +4,9 @@
       <TheHeroHeader />
       <SpriteDisplay :img="img" />
       <SpriteController @update-sprite="generateSprite($event)" />
-      <div class="pattern-dots-sm slategray h-5" />
+      <div class="pattern-dots-sm slategray h-5 my-5" />
       <SnippetDisplay :url="requesturl" />
+      <div class="pattern-dots-sm slategray h-5 my-5" />
       <TechnicalNotes />
       <BaseFooter />
     </div>
