@@ -103,6 +103,7 @@ export default {
 <style>
 #container {
   background: #1d2b53;
+  padding: 10px;
   position: fixed;
   width: 100%;
   height: 100%;
