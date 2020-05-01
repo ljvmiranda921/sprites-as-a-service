@@ -8,7 +8,7 @@
 export default {
   name: "SpriteDisplay",
   props: {
-    img: String
+    img: String,
   },
 };
 </script>
@@ -21,6 +21,4 @@ export default {
   border-style: solid;
   border-width: 5px;
 }
-
-
 </style>

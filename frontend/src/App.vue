@@ -86,7 +86,7 @@ export default {
       }
 
       if (spriteConfig.survival === null) {
-        survivalPrefix = ""
+        survivalPrefix = "";
         survivalText = "";
       }
 
@@ -109,7 +109,7 @@ export default {
             extinctionPrefix +
             extinctionText +
             survivalPrefix +
-            survivalText
+            survivalText;
         })
         .catch((error) => console.log("error.response", error));
     },
@@ -120,10 +120,12 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Press Start 2P", cursive;
 }
-
 
 #container {
   background: #1d2b53;

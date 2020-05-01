@@ -2,22 +2,36 @@
   <div>
     <h4>Licensing</h4>
     <p>
-      Sprite-as-a-Service is open-source under a dual-license: the
-      code is <a href="https://opensource.org/licenses/MIT">MIT</a>, and the
-      sprites are
+      Sprite-as-a-Service is open-source under a dual-license: the code is
+      <a href="https://opensource.org/licenses/MIT">MIT</a>, and the sprites are
       <a href="https://creativecommons.org/licenses/by/4.0/deed.ast"
         >CC BY 4.0</a
-      >.</p>
-    
-    <p><b>It's highly-permissive</b>, so please support this project through the following:
+      >.
+    </p>
+
+    <p>
+      <b>It's highly-permissive</b>, so please support this project through the
+      following:
     </p>
     <ul>
       <li>
-        Let me know if you're using this by <a href="https://github.com/ljvmiranda921/sprite-as-a-service/issues/new">opening up an Issue</a>.
+        Let me know if you're using this by
+        <a
+          href="https://github.com/ljvmiranda921/sprite-as-a-service/issues/new"
+          >opening up an Issue</a
+        >.
       </li>
-      <li><a href="https://github.com/ljvmiranda921/sprite-as-a-service"><b>Leave a star</b></a> or contribute back to this project!</li>
       <li>
-        Help me maintain server costs&mdash;perhaps, <a href="https://www.buymeacoffee.com/ljvmiranda921">buy me a coffee?</a>
+        <a href="https://github.com/ljvmiranda921/sprite-as-a-service"
+          ><b>Leave a star</b></a
+        >
+        or contribute back to this project!
+      </li>
+      <li>
+        Help me maintain server costs&mdash;perhaps,
+        <a href="https://www.buymeacoffee.com/ljvmiranda921"
+          >buy me a coffee?</a
+        >
       </li>
     </ul>
   </div>

@@ -2,7 +2,7 @@
   <div>
     <h3 class="section-title">Generate sprites via a REST API</h3>
     <div class="samplecode curl-container">
-        <pre class="url-container">{{ url }}</pre>
+      <pre class="url-container">{{ url }}</pre>
     </div>
     <div class="wrapper">
       <div class="right"><SnippetDisplayDocs /></div>
@@ -26,8 +26,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 .curl-container {
   background-color: #000;
   border-radius: 10px;
@@ -39,6 +37,4 @@ export default {
   font-family: Consolas, monospace;
   font-size: 20px;
 }
-
-
 </style>
