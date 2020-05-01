@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <p>(c) Lester James V. Miranda, 2020</p>
-    <!-- TODO: Add social links -->
+  <div id="copyright">
+    <p>(c) Lj V. Miranda, 2020</p>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#copyright {
+  padding: 20px;
+}
+</style>
