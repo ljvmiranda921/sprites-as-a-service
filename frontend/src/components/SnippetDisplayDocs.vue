@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Parameters</h4>
+    <h4><i class="nes-icon coin"></i> Parameters</h4>
     <p>
       Control the appearance of your sprites using these parameters!
     </p>

@@ -1,5 +1,6 @@
 <template>
   <div id="container">
+    <GithubLogo />
     <div class="pattern-cross-dots-md gray-darkest">
       <div id="app">
         <TheHeroHeader />
@@ -17,6 +18,7 @@
 
 <script>
 import TheHeroHeader from "./components/TheHeroHeader";
+import GithubLogo from "./components/GithubLogo";
 import SpriteDisplay from "./components/SpriteDisplay";
 import SpriteController from "./components/SpriteController";
 import SnippetDisplay from "./components/SnippetDisplay";
@@ -28,6 +30,7 @@ export default {
   name: "App",
   components: {
     TheHeroHeader,
+    GithubLogo,
     SpriteDisplay,
     SpriteController,
     SnippetDisplay,
@@ -181,4 +184,5 @@ a:link {
 .section-title {
   color: #29adff;
 }
+
 </style>
