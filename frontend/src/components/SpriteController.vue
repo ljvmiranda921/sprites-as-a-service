@@ -15,7 +15,9 @@
       <div class="sprite-range">
         <div class="tooltip">
           <label for="extinctionControl">Extinction</label>
-          <span class="tooltiptext" >Controls how many dead cells will stay dead</span>
+          <span class="tooltiptext"
+            >Controls how many dead cells will stay dead</span
+          >
         </div>
         <input
           type="range"
@@ -31,7 +33,9 @@
       <div class="sprite-range">
         <div class="tooltip">
           <label for="survivalControl">Survival</label>
-          <span class="tooltiptext" >Controls how many living cells will stay alive</span>
+          <span class="tooltiptext"
+            >Controls how many living cells will stay alive</span
+          >
         </div>
         <input
           type="range"
@@ -44,19 +48,16 @@
         />
       </div>
     </div>
-    <SpriteControllerCTA />
   </div>
 </template>
 
 <script>
 import SpriteControllerButton from "./SpriteControllerButton";
-import SpriteControllerCTA from "./SpriteControllerCTA";
 
 export default {
   name: "SpriteController",
   components: {
     SpriteControllerButton,
-    SpriteControllerCTA,
   },
   data() {
     return {
@@ -165,7 +166,7 @@ input[type="range"]::-ms-fill-upper {
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 3px dotted #fff1e8; 
+  border-bottom: 3px dotted #fff1e8;
 }
 
 /* Tooltip text */
