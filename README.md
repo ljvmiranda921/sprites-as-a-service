@@ -1,20 +1,20 @@
-# Sprite-as-a-Service
+# Sprites-as-a-service
 
 Generate 8-bit avatars using Cellular Automata!
 
 ## Running locally
 
-The easiest way to run Sprite-as-a-Service locally is via [docker
+The easiest way to run Sprites-as-a-service locally is via [docker
 compose](https://docs.docker.com/compose/). First, clone this repository:
 
 ```sh
-git clone git@github.com:ljvmiranda921/sprite-as-a-service.git
+git clone git@github.com:ljvmiranda921/sprites-as-a-service.git
 ```
 
 then build the images:
 
 ```sh
-cd sprite-as-a-service
+cd sprites-as-a-service
 docker-compose build
 ```
 
@@ -41,4 +41,4 @@ docker-compose down
 
 The content of this project itself is licensed under the [Creative Commons
 Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.ast), and the underlying source code used to generate the
-sprites and build the website is licensed under the [MIT license](https://github.com/ljvmiranda921/sprite-as-a-service/blob/master/LICENSE).
+sprites and build the website is licensed under the [MIT license](https://github.com/ljvmiranda921/sprites-as-a-service/blob/master/LICENSE).

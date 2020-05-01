@@ -2,7 +2,7 @@
   <div>
     <h4>Changelog</h4>
     <p>
-      This is the initial release of Sprite-as-a-Service:
+      This is the initial release of Sprites-as-a-service:
     </p>
     <ul>
       <li>
@@ -17,7 +17,7 @@
       </li>
       <li>
         You can deploy this to any platform of your choice, check
-        <a href="https://github.com/ljvmiranda921/sprite-as-a-service"
+        <a href="https://github.com/ljvmiranda921/sprites-as-a-service"
           >this link</a
         >
         for more information.

@@ -65,7 +65,7 @@ def make_sprite(
         "Author": "@ljvmiranda921",
         "Description": "Generated 8-bit sprite from Cellular Automata",
         "Copyright": "MIT License",
-        "Software": "https://github.com/ljvmiranda921/sprite-as-a-service",
+        "Software": "https://github.com/ljvmiranda921/sprites-as-a-service",
     }
     FigureCanvasAgg(fig).print_png(binary_output, metadata=metadata)
     base64_output = base64.b64encode(binary_output.getvalue())
