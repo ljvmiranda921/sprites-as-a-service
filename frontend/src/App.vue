@@ -115,7 +115,7 @@ export default {
 
 #app {
   /* Fonts and smoothing */
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Consolas, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -127,9 +127,12 @@ export default {
   margin-top: 60px;
   width: 80%;
   margin: auto;
-
-  /* Colors */
 }
+
+a:link {
+  color: #ffec27;
+}
+
 
 @media (min-width: 768px) {
   .wrapper {

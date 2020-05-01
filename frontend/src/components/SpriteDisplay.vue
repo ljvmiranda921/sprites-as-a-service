@@ -1,14 +1,22 @@
 <template>
   <div>
-    <img :src="'data:image/png;base64,' + img" />
+    <img class="display" :src="'data:image/png;base64,' + img" />
   </div>
 </template>
 
 <script>
 export default {
   name: "SpriteDisplay",
-  props: ["img"],
+  props: {
+    img: String
+  },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.display {
+  padding: 50px;
+}
+
+
+</style>
