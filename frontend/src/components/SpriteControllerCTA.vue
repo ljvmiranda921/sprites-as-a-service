@@ -2,7 +2,7 @@
   <div class="container">
     <h4>
       Leave us a Star on
-      <a href="https://github.com/ljvmiranda921/sprite-as-a-service">Github!</a>
+      <a href="https://github.com/ljvmiranda921/sprites-as-a-service">Github!</a>
     </h4>
     <section class="icon-list">
       <i class="nes-icon is-medium star" />

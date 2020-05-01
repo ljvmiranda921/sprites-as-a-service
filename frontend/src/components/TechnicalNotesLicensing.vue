@@ -2,7 +2,7 @@
   <div>
     <h4>Licensing</h4>
     <p>
-      Sprite-as-a-Service is open-source under a dual-license: the code is
+      Sprites-as-a-service is open-source under a dual-license: the code is
       <a href="https://opensource.org/licenses/MIT">MIT</a>, and the sprites are
       <a href="https://creativecommons.org/licenses/by/4.0/deed.ast"
         >CC BY 4.0</a
@@ -17,12 +17,12 @@
       <li>
         Let me know if you're using this by
         <a
-          href="https://github.com/ljvmiranda921/sprite-as-a-service/issues/new"
+          href="https://github.com/ljvmiranda921/sprites-as-a-service/issues/new"
           >opening up an Issue</a
         >.
       </li>
       <li>
-        <a href="https://github.com/ljvmiranda921/sprite-as-a-service"
+        <a href="https://github.com/ljvmiranda921/sprites-as-a-service"
           ><b>Leave a star</b></a
         >
         or contribute back to this project!
