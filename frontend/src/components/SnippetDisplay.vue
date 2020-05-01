@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h4>Generate sprites via a REST API</h4>
     <p>curl -X GET {{ url }}</p>
     <div class="wrapper">
       <div class="right"><SnippetDisplayDocs /></div>

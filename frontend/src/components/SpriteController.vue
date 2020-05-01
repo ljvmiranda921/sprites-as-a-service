@@ -109,7 +109,7 @@ input[type="text"] {
 }
 
 input[type="range"] {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 label {
@@ -171,19 +171,19 @@ input[type="range"]::-ms-fill-upper {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
   background-color: black;
   color: #fff;
   text-align: center;
   padding: 5px 5px;
   border-radius: 6px;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
 
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
