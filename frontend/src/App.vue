@@ -177,6 +177,6 @@ a:link {
 }
 
 .section-title {
-  color: #ffa300;
+  color: #29adff;
 }
 </style>

@@ -7,24 +7,30 @@
     <div>
     <ul>
       <li>
-        <b>q:</b> query string, generates a unique sprite for any value (string)
+        <b class="param">q:</b> query string, generates a unique sprite for any value (string)
       </li>
       <li>
-        <b>n_iters:</b> controls the number of iterations to run the automata
-        (integer)
+        <b class="param">n_iters:</b> number of iterations to run the automata (integer)
       </li>
       <li>
-        <b>extinction:</b> controls how many dead cells will stay dead (float,
+        <b class="param">extinction:</b> controls how many dead cells will stay dead (float,
         0-1)
       </li>
       <li>
-        <b>survival:</b> controls how many live cells will stay alive (float,
+        <b class="param">survival:</b> controls how many live cells will stay alive (float,
         0-1)
       </li>
-      <li><b>size:</b> size of the image, in pixels (integer)</li>
+      <li><b class="param">size:</b> size of the image, in pixels (integer)</li>
     </ul>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+.param {
+  color: #ffa300;
+
+}
+
+</style>
