@@ -1,14 +1,16 @@
 <template>
   <div id="container">
-    <div id="app">
-      <TheHeroHeader />
-      <SpriteDisplay :img="img" />
-      <SpriteController @update-sprite="generateSprite($event)" />
-      <div class="pattern-dots-sm slategray h-5 my-5" />
-      <SnippetDisplay :url="requesturl" />
-      <div class="pattern-dots-sm slategray h-5 my-5" />
-      <TechnicalNotes />
-      <BaseFooter />
+    <div class="pattern-cross-dots-md gray-darkest">
+      <div id="app">
+        <TheHeroHeader />
+        <SpriteDisplay :img="img" />
+        <SpriteController @update-sprite="generateSprite($event)" />
+        <div class="pattern-dots-sm slategray h-5 my-5" />
+        <SnippetDisplay :url="requesturl" />
+        <div class="pattern-dots-sm slategray h-5 my-5" />
+        <TechnicalNotes />
+        <BaseFooter />
+      </div>
     </div>
   </div>
 </template>
@@ -112,7 +114,6 @@ export default {
   overflow: auto;
 }
 
-
 #app {
   /* Fonts and smoothing */
   font-family: Consolas, monospace;
@@ -122,7 +123,7 @@ export default {
   /* Text design */
   text-align: center;
   color: #fff1e8;
-  
+
   /* Padding and margins */
   margin-top: 60px;
   width: 80%;
@@ -132,7 +133,6 @@ export default {
 a:link {
   color: #ffec27;
 }
-
 
 @media (min-width: 768px) {
   .wrapper {

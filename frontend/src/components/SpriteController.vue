@@ -3,39 +3,41 @@
     <SpriteControllerButton @random-sprite="setDefaults" />
 
     <div>
-      <input
-        type="text"
-        v-model.trim="spriteConfig.q"
-        placeholder="Type anything!"
-      />
-    </div>
+      <h4 id="options-header">More Options</h4>
+      <div class="nes-field sprite-field">
+        <input
+          type="text"
+          v-model.trim="spriteConfig.q"
+          placeholder="Type anything!"
+        />
+      </div>
 
-    <div>
-      <label for="extinctionControl">Extinction</label>
-      <input
-        type="range"
-        id="extinctionControl"
-        value="0.125"
-        v-model.number="spriteConfig.extinction"
-        min="0"
-        max="1"
-        step="0.1"
-      />
-    </div>
+      <div>
+        <label for="extinctionControl">Extinction</label>
+        <input
+          type="range"
+          id="extinctionControl"
+          value="0.125"
+          v-model.number="spriteConfig.extinction"
+          min="0"
+          max="1"
+          step="0.1"
+        />
+      </div>
 
-    <div>
-      <label for="survivalControl">Survival</label>
-      <input
-        type="range"
-        id="survivalControl"
-        value="0.375"
-        v-model.number="spriteConfig.survival"
-        min="0"
-        max="1"
-        step="0.1"
-      />
+      <div>
+        <label for="survivalControl">Survival</label>
+        <input
+          type="range"
+          id="survivalControl"
+          value="0.375"
+          v-model.number="spriteConfig.survival"
+          min="0"
+          max="1"
+          step="0.1"
+        />
+      </div>
     </div>
-    <!-- TODO: Add call to action: "Like it? Love it? Leave us a Star on Github"-->
     <SpriteControllerCTA />
   </div>
 </template>
@@ -81,10 +83,14 @@ export default {
 
 <style scoped>
 
-.button-wrapper {
-  padding: 20px;
+.sprite-field {
+  font-size: 14pt;  
+  padding: 10px;
 }
 
+#options-header {
+  color: #29adff;
+}
 
 
 </style>
