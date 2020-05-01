@@ -1,4 +1,4 @@
-# Sprites-as-a-service
+![](header.png)
 
 Generate 8-bit avatars using Cellular Automata!
 
