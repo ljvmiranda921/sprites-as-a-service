@@ -1,8 +1,6 @@
 ![](header.png)
 
-Generate 8-bit avatars using Cellular Automata!
-
-## Running locally
+## Running the development server 
 
 The easiest way to run Sprites-as-a-service locally is via [docker
 compose](https://docs.docker.com/compose/). First, clone this repository:
@@ -33,7 +31,7 @@ You should be able to see the application running at
 docker-compose down
 ```
 
-## Deployment
+## Production server and deployment
 
 *In progress*
 
