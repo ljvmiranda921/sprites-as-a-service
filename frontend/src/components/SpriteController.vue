@@ -63,8 +63,8 @@ export default {
     return {
       spriteConfig: {
         q: null,
-        extinction: 0.125,
-        survival: 0.375,
+        extinction: null,
+        survival: null,
       },
     };
   },
