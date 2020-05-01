@@ -1,4 +1,8 @@
-# frontend
+# Sprites-as-a-Service Frontend
+
+This folder contains the frontend component of Sprites-as-a-Service. In order to
+set-up your development environment *just* for this part, run the following
+commands below:
 
 ## Project setup
 ```
