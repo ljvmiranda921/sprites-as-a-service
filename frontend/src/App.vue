@@ -41,8 +41,8 @@ export default {
       baseurl: "http://localhost:8000/api/v1/sprite",
       spriteConfig: {
         q: null,
-        extinction: 0.125,
-        survival: 0.375,
+        extinction: null,
+        survival: null,
       },
     };
   },
@@ -67,12 +67,29 @@ export default {
       // we will always return null
       var queryPrefix = "?q=";
       var extinctionPrefix = "&extinction=";
+      var survivalPrefix = "&survival=";
+
       var queryText = spriteConfig.q;
+      var extinctionText = spriteConfig.extinction;
+      var survivalText = spriteConfig.survival;
+
       if (spriteConfig.q === null || spriteConfig.q == "") {
         queryPrefix = "";
         extinctionPrefix = "?extinction=";
         queryText = null;
       }
+
+      if (spriteConfig.extinction === null) {
+        extinctionPrefix = "";
+        survivalPrefix = "?survival=";
+        extinctionText = "";
+      }
+
+      if (spriteConfig.survival === null) {
+        survivalPrefix = ""
+        survivalText = "";
+      }
+
       axios
         .get(this.baseurl, {
           params: {
@@ -90,11 +107,9 @@ export default {
             queryPrefix +
             spriteConfig.q +
             extinctionPrefix +
-            spriteConfig.extinction +
-            "&survival=" +
-            spriteConfig.survival +
-            "&size=" +
-            300;
+            extinctionText +
+            survivalPrefix +
+            survivalText
         })
         .catch((error) => console.log("error.response", error));
     },
@@ -134,6 +149,7 @@ h1, h2, h3, h4 {
   /* Padding and margins */
   margin-top: 60px;
   width: 80%;
+  max-width: 768px;
   margin: auto;
 }
 

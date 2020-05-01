@@ -80,8 +80,8 @@ export default {
     setDefaults() {
       this.spriteConfig = {
         q: "",
-        extinction: 0.125,
-        survival: 0.375,
+        extinction: null,
+        survival: null,
       };
     },
   },
@@ -110,12 +110,12 @@ input[type="text"] {
 }
 
 input[type="range"] {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 label {
   font-family: "Press Start 2P", cursive;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sprite-range {
@@ -134,7 +134,7 @@ label {
     height: 10px;
     -webkit-appearance: none;
     color: #c2c3c7;
-    margin-top: -1px;
+    width: 100%;
     background-color: #c2c3c7;
   }
 
@@ -144,9 +144,10 @@ label {
     height: 10px;
     cursor: ew-resize;
     background: #5f574f;
-    box-shadow: -80px 0 0 80px #00e436;
+    box-shadow: -80px 0px 0px 80px #00e436;
   }
 }
+
 /* FF */
 input[type="range"]::-moz-range-progress {
   background-color: #00e436;
@@ -166,7 +167,7 @@ input[type="range"]::-ms-fill-upper {
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 3px dotted #fff1e8;
+  border-bottom: 2px dotted #fff1e8;
 }
 
 /* Tooltip text */

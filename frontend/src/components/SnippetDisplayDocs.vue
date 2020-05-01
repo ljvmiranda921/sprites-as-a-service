@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Available Parameters</h3>
+    <h4>Parameters</h4>
     <p>
       Here are all parameters you can use to control how your sprites will look
       like (v1)!

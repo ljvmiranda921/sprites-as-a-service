@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Read more in the documentation</h3>
+    <h4>Read more in the documentation</h4>
   </div>
 </template>
 
