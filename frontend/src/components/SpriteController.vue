@@ -2,7 +2,7 @@
   <div>
     <SpriteControllerButton @random-sprite="setDefaults" />
 
-    <h4 id="options-header">More Options</h4>
+    <h4 id="options-header">Options</h4>
     <div class="sprite-field">
       <input
         type="text"
@@ -97,7 +97,7 @@ input {
 }
 
 input[type='text'] {
-  width: 60%;
+  width: 80%;
 }
 
 input[type='range'] {
@@ -124,8 +124,9 @@ label {
     input[type='range']::-webkit-slider-runnable-track {
       height: 10px;
       -webkit-appearance: none;
-      color: #00e436;
+      color: #c2c3c7;
       margin-top: -1px;
+      background-color: #c2c3c7;
     }
     
     input[type='range']::-webkit-slider-thumb {
@@ -133,7 +134,7 @@ label {
       -webkit-appearance: none;
       height: 10px;
       cursor: ew-resize;
-      background: #434343;
+      background: #5f574f;
       box-shadow: -80px 0 0 80px #00e436;
     }
 
