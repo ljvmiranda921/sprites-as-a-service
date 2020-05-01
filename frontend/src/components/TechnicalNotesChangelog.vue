@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h3>Sprite-as-a-Service v1.0.0</h3>
+    <h4>Changelog</h4>
     <p>
-      This is the initial release of Sprite-as-a-Service, I hope you enjoy
-      generating your own sprites! Here are some features:
+      This is the initial release of Sprite-as-a-Service:
     </p>
     <ul>
       <li>
