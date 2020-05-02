@@ -23,6 +23,10 @@ export default {
   ** Global CSS
   */
   css: [
+      "pattern.css/dist/pattern.min.css",
+      "nes.css/css/nes.min.css",
+      "shorthandcss/dist/shorthand.min.css",
+      "@fortawesome/fontawesome-free/css/all.min.css"
   ],
   /*
   ** Plugins to load before mounting the App

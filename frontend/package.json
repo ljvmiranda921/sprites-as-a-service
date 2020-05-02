@@ -11,10 +11,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@nuxtjs/axios": "^5.3.6",
+    "axios": "^0.19.2",
     "nes.css": "^2.3.0",
     "nuxt": "^2.0.0",
-    "pattern.css": "^1.0.0"
+    "pattern.css": "^1.0.0",
+    "shorthandcss": "^1.1.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.10.0",
