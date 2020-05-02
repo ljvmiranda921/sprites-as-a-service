@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import TheHeroHeader from "./components/TheHeroHeader";
-import GithubLogo from "./components/GithubLogo";
-import SpriteDisplay from "./components/SpriteDisplay";
-import SpriteController from "./components/SpriteController";
-import SnippetDisplay from "./components/SnippetDisplay";
-import TechnicalNotes from "./components/TechnicalNotes";
-import BaseFooter from "./components/BaseFooter";
+import TheHeroHeader from "~/components/TheHeroHeader";
+import GithubLogo from "~/components/GithubLogo";
+import SpriteDisplay from "~/components/SpriteDisplay";
+import SpriteController from "~/components/SpriteController";
+import SnippetDisplay from "~/components/SnippetDisplay";
+import TechnicalNotes from "~/components/TechnicalNotes";
+import BaseFooter from "~/components/BaseFooter";
 import axios from "axios";
 
 export default {
