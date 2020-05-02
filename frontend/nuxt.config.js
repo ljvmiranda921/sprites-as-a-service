@@ -1,5 +1,11 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/sprites-as-a-service/'
+  }
+} : {}
 
 export default {
+  ...routerBase,
   mode: 'spa',
   /*
   ** Headers of the page

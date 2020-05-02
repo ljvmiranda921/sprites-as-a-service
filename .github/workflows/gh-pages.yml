@@ -29,7 +29,7 @@ jobs:
         run: npm ci
       - name: Generate static site
         working-directory: frontend
-        run: npm run generate
+        run: npm run generate:gh-pages
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
