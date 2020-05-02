@@ -1,3 +1,0 @@
-{
-    "extends": ["prettier", "plugin:vue/recommended"]
-}
