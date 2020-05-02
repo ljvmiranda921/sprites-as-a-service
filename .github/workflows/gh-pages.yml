@@ -27,12 +27,16 @@ jobs:
       - name: Install dependencies
         working-directory: frontend
         run: npm ci
+      - name: Build static site
+        working-directory: frontend
+        run: npm run build:gh-pages
       - name: Generate static site
         working-directory: frontend
         run: npm run generate:gh-pages
 
-      - name: deploy
+      - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
+          force_orphan: true
