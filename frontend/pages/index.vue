@@ -41,7 +41,7 @@ export default {
     return {
       img: "",
       requesturl: "",
-      baseurl: "http://localhost:8000/api/v1/sprite",
+      baseurl: "https://sprites-as-a-service-tblytwilzq-ue.a.run.app/api/v1/sprite",
       spriteConfig: {
         q: null,
         extinction: null,
