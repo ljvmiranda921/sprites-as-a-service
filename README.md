@@ -4,7 +4,7 @@
 ![Frontend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Frontend%20CI/badge.svg)
 ![Backend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Backend%20CI/badge.svg)
 
-**Try the interactive demo [here](ljvmiranda921.github.io/sprites-as-a-service)**
+**Try the interactive demo [here](ljvmiranda921.github.io/sprites-as-a-service) :sparkles: :sparkles:**
 
 ## Running the development server 
 
