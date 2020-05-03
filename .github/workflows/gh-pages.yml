@@ -2,8 +2,7 @@ name: Github Pages
 
 on:
   push:
-    branches:
-      - master
+    tags: [ v* ]  # Only build gh-pages on version updates
 
 jobs:
   deploy:
