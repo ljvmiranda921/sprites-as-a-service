@@ -15,4 +15,4 @@ WORKDIR /app
 COPY . .
 
 ENV PATH="/opt/venv/bin:$PATH"
-CMD ["uvicorn", "sprites.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+CMD gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8080 sprites.main:app

@@ -6,7 +6,8 @@ services:
             context: backend/
             dockerfile: Dockerfile
         ports:
-            - "8000:8000"
+            - "8080:8080"
+        command: uvicorn sprites.main:app --reload --port 8080 --host 0.0.0.0
     frontend:
         image: "sprites-frontend"
         build:
