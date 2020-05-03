@@ -10,7 +10,7 @@
 generate custom 8-bit sprites using Cellular Automata, particularly Conway's
 Game of Life. Generate a unique sprite given a text, and control extinction and
 survival rates. In addition, you can also access the generator via a REST API.
-Use it for your chat app or games!
+**Use it for your chat app or games!**
 
 ## Running the development server 
 
