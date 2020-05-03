@@ -6,6 +6,12 @@
 
 **Try the interactive demo [here](ljvmiranda921.github.io/sprites-as-a-service) :sparkles::sparkles:**
 
+**Sprites-as-a-Service** is an open-source web application that allows you to
+generate custom 8-bit sprites using Cellular Automata, particularly Conway's
+Game of Life. Generate a unique sprite given a text, and control extinction and
+survival rates. In addition, you can also access the generator via a REST API.
+Use it for your chat app or games!
+
 ## Running the development server 
 
 The easiest way to run Sprites-as-a-service locally is via [docker
