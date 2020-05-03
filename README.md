@@ -1,5 +1,11 @@
 ![](assets/header.png)
 
+![Github Pages](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Github%20Pages/badge.svg)
+![Frontend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Frontend%20CI/badge.svg)
+![Backend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Backend%20CI/badge.svg)
+
+**Try the interactive demo [here](ljvmiranda921.github.io/sprites-as-a-service)**
+
 ## Running the development server 
 
 The easiest way to run Sprites-as-a-service locally is via [docker
