@@ -1,6 +1,6 @@
 {
   "name": "Sprites-as-a-Service",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "description": "Generate 8-bit avatars using Cellular Automata!",
   "author": "Lj V. Miranda",
   "private": true,
