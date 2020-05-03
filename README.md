@@ -1,8 +1,21 @@
-# Sprites-as-a-service
+![](assets/header.png)
 
-Generate 8-bit avatars using Cellular Automata!
+![Github Pages](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Github%20Pages/badge.svg)
+![Frontend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Frontend%20CI/badge.svg)
+![Backend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Backend%20CI/badge.svg)
 
-## Running locally
+**Try the interactive demo [here](https://ljvmiranda921.github.io/sprites-as-a-service) :sparkles::sparkles:**
+
+**Sprites-as-a-Service** is an open-source web application that allows you to
+generate custom 8-bit sprites using Cellular Automata, particularly Conway's
+Game of Life. Generate a unique sprite given a text, and control extinction and
+survival rates. In addition, you can also access the generator via a REST API.
+**Use it for your chat app or games!**
+
+The frontend is made with Vue.js (with Nuxt.js) whereas the backend is done
+using Python and FastAPI.
+
+## Running the development server 
 
 The easiest way to run Sprites-as-a-service locally is via [docker
 compose](https://docs.docker.com/compose/). First, clone this repository:
@@ -33,9 +46,27 @@ You should be able to see the application running at
 docker-compose down
 ```
 
-## Deployment
+## Production server and deployment
 
-*In progress*
+The frontend demo application is currently deployed in my website. I first
+generate a static website using Nuxt's `npm run generate`, then serve it on
+Github pages. To see the frontend deployment procedure, I encourage you to
+check `.github/workflows/gh-pages.yml`.
+
+On the other hand, the backend service is deployed in [Google Cloud
+Run](https://cloud.google.com/run/). I first build the image found in
+`./backend/Dockerfile` and deploy them to GCP. Check
+`.github/workflows/cloud-run.yml` for more information.
+
+I highly-encourage you to use the [Docker
+images](https://github.com/ljvmiranda921/sprites-as-a-service/packages)
+published in this repository. You might not need the frontend component itself,
+but the backend can be deployed as a microservice. 
+
+```sh
+docker pull docker.pkg.github.com/ljvmiranda921/sprites-as-a-service/sprites-backend:latest
+```
+
 
 ## License
 
