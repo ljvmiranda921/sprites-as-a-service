@@ -1,4 +1,4 @@
-![](header.png)
+![](assets/header.png)
 
 ## Running the development server 
 
