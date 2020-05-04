@@ -29,10 +29,13 @@ jobs:
       - name: Build static site
         working-directory: frontend
         run: npm run build:gh-pages
+        env:
+            BASE_URL: "https://sprites-as-a-service-tblytwilzq-ue.a.run.app/api/v1/sprite"
       - name: Generate static site
         working-directory: frontend
         run: npm run generate:gh-pages
-
+        env:
+            BASE_URL: "https://sprites-as-a-service-tblytwilzq-ue.a.run.app/api/v1/sprite"
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
