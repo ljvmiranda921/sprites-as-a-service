@@ -9,6 +9,8 @@ from fastapi import FastAPI, Response, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
 import matplotlib
+import matplotlib.pyplot as plt
+
 
 matplotlib.use("Agg")
 from matplotlib.backends.backend_agg import FigureCanvasAgg
@@ -69,5 +71,6 @@ def make_sprite(
     }
     FigureCanvasAgg(fig).print_png(binary_output, metadata=metadata)
     base64_output = base64.b64encode(binary_output.getvalue())
+    plt.close(fig)  # close the window to prevent memory leaks
     logger.success("Done!")
     return Response(base64_output, media_type="image/png")
