@@ -26,6 +26,7 @@ import TechnicalNotes from "~/components/TechnicalNotes";
 import BaseFooter from "~/components/BaseFooter";
 import axios from "axios";
 
+
 export default {
   name: "App",
   components: {
@@ -41,7 +42,7 @@ export default {
     return {
       img: "",
       requesturl: "",
-      baseurl: "https://sprites-as-a-service-tblytwilzq-ue.a.run.app/api/v1/sprite",
+      baseurl: process.env.baseurl,
       spriteConfig: {
         q: null,
         extinction: null,

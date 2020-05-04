@@ -8,6 +8,12 @@ export default {
   ...routerBase,
   mode: 'spa',
   /*
+  ** Environment variables
+  */
+  env: {
+    baseurl: process.env.BASE_URL || 'http://localhost:8080/api/v1/sprite'
+  },
+  /*
   ** Headers of the page
   */
   head: {
