@@ -3,6 +3,7 @@
 # Import standard library
 import io
 import base64
+import gc
 
 # Import modules
 from fastapi import FastAPI, Response, HTTPException
@@ -72,5 +73,6 @@ def make_sprite(
     FigureCanvasAgg(fig).print_png(binary_output, metadata=metadata)
     base64_output = base64.b64encode(binary_output.getvalue())
     plt.close(fig)  # close the window to prevent memory leaks
+    gc.collect()
     logger.success("Done!")
     return Response(base64_output, media_type="image/png")
