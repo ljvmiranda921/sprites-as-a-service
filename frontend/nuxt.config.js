@@ -4,6 +4,8 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
+const favicon = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/sprites-as-a-service/favicon.ico' : '/favicon.ico'
+
 export default {
   ...routerBase,
   mode: 'spa',
@@ -24,7 +26,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: favicon }
     ]
   },
   /*
