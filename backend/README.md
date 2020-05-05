@@ -34,7 +34,7 @@ to your project directory, rather than the system-installed Python. Now, to run
 the application, execute the following command:
 
 ```sh
-uvicorn sprites.main:app --reload
+uvicorn sprites.main:app --host 0.0.0.0 --port 8080 --reload  
 ```
 
 ## Running the Docker images
