@@ -23,11 +23,13 @@ lazy-object-proxy==1.4.3  # via astroid
 loguru==0.4.1             # via -r requirements.txt, pyseagull
 matplotlib==3.2.1         # via -r requirements.txt, pyseagull
 mccabe==0.6.1             # via pylint
+memory-profiler==0.57.0   # via -r requirements-dev.in
 more-itertools==8.2.0     # via pytest
 numpy==1.18.2             # via -r requirements.txt, matplotlib, pyseagull, scipy
 packaging==20.3           # via pytest
 pathspec==0.8.0           # via black
 pluggy==0.13.1            # via pytest
+psutil==5.7.0             # via memory-profiler
 py==1.8.1                 # via pytest
 pydantic==1.4             # via -r requirements.txt, fastapi
 pylint==2.5.0             # via -r requirements-dev.in
