@@ -23,7 +23,7 @@ from .hashing import get_seeds, hasher
 app = FastAPI(
     title="Sprite as a Service",
     description="Generate 8-bit avatars from Cellular Automata!",
-    version="0.3.2",
+    version="0.3.3",
 )
 
 app.add_middleware(
