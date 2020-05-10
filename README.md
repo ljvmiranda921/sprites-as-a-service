@@ -1,4 +1,4 @@
-![](assets/header.png)
+![](frontend/static/header.png)
 
 ![Github Pages](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Github%20Pages/badge.svg)
 ![Frontend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Frontend%20CI/badge.svg)
