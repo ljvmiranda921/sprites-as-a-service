@@ -67,6 +67,10 @@ but the backend can be deployed as a microservice.
 docker pull docker.pkg.github.com/ljvmiranda921/sprites-as-a-service/sprites-backend:latest
 ```
 
+## Notable Implementations
+
+- [@danielgjackson](https://github.com/danielgjackson) has a pure-Javascript port for Sprites-as-a-Service. From that he made [Infinite Sprites!](https://danielgjackson.github.io/sprite/infinite.html) I encourage you to check it out and spend your hours looking at them!
+- [@yurkth](https://github.com/yurkth) created [Sprator](https://github.com/yurkth/sprator), a GUI application that generates sprites using cellular automaton. Here, you can set a seed, base & background colors, and size!
 
 ## License
 
