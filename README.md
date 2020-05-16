@@ -1,8 +1,9 @@
 ![](frontend/static/header.png)
 
-![Github Pages](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Github%20Pages/badge.svg)
-![Frontend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Frontend%20CI/badge.svg)
-![Backend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Backend%20CI/badge.svg)
+[![Github Pages](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Github%20Pages/badge.svg)](https://github.com/ljvmiranda921/sprites-as-a-service/actions?query=workflow%3A%22Github+Pages%22)
+[![Cloud Run](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Cloud%20Run/badge.svg)](https://github.com/ljvmiranda921/sprites-as-a-service/actions?query=workflow%3A%22Cloud+Run%22)
+[![Frontend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Frontend%20CI/badge.svg)](https://github.com/ljvmiranda921/sprites-as-a-service/actions?query=workflow%3A%22Frontend+CI%22)
+[![Backend CI](https://github.com/ljvmiranda921/sprites-as-a-service/workflows/Backend%20CI/badge.svg)](https://github.com/ljvmiranda921/sprites-as-a-service/actions?query=workflow%3A%22Backend+CI%22)
 
 **Try the interactive demo [here](https://ljvmiranda921.github.io/sprites-as-a-service) :sparkles::sparkles:**
 
