@@ -1,5 +1,8 @@
 <template>
   <div id="copyright">
+    <div>
+      <p>Version: 0.4.2</p>
+    </div>
     <p>(c) Lj V. Miranda, 2020</p>
     <div>
       <a href="https://github.com/ljvmiranda921"><i class="fab fa-github icons"></i></a>
