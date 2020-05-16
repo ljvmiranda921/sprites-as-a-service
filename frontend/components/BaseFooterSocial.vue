@@ -1,7 +1,7 @@
 <template>
   <div id="copyright">
     <div>
-      <p>Version: 0.4.2</p>
+      <p>Version: 0.5.0</p>
     </div>
     <p>(c) Lj V. Miranda, 2020</p>
     <div>
