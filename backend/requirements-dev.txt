@@ -1,4 +1,3 @@
-aiocontextvars==0.2.2     # via -r requirements.txt, loguru
 appdirs==1.4.3            # via black
 astroid==2.4.0            # via pylint
 attrs==19.3.0             # via black, pytest
@@ -6,17 +5,13 @@ black==19.10b0            # via -r requirements-dev.in
 certifi==2020.4.5.1       # via -r requirements.txt, requests
 chardet==3.0.4            # via -r requirements.txt, requests
 click==7.1.1              # via -r requirements.txt, black, uvicorn
-contextvars==2.4          # via -r requirements.txt, aiocontextvars
 coverage==5.1             # via pytest-cov
 cycler==0.10.0            # via -r requirements.txt, matplotlib
-dataclasses==0.7          # via -r requirements.txt, pydantic
 fastapi==0.54.1           # via -r requirements.txt
 gunicorn==20.0.4          # via -r requirements.txt
 h11==0.9.0                # via -r requirements.txt, uvicorn
 httptools==0.1.1          # via -r requirements.txt, uvicorn
 idna==2.9                 # via -r requirements.txt, requests
-immutables==0.11          # via -r requirements.txt, contextvars
-importlib-metadata==1.6.0  # via pluggy, pytest
 isort==4.3.21             # via pylint
 kiwisolver==1.2.0         # via -r requirements.txt, matplotlib
 lazy-object-proxy==1.4.3  # via astroid
@@ -44,14 +39,13 @@ scipy==1.4.1              # via -r requirements.txt, pyseagull
 six==1.14.0               # via -r requirements.txt, astroid, cycler, packaging, python-dateutil
 starlette==0.13.2         # via -r requirements.txt, fastapi
 toml==0.10.0              # via black, pylint
-typed-ast==1.4.1          # via astroid, black
+typed-ast==1.4.1          # via black
 urllib3==1.25.8           # via -r requirements.txt, requests
-uvicorn==0.11.3           # via -r requirements.txt
+uvicorn==0.11.7           # via -r requirements.txt
 uvloop==0.14.0            # via -r requirements.txt, uvicorn
 wcwidth==0.1.9            # via pytest
 websockets==8.1           # via -r requirements.txt, uvicorn
 wrapt==1.12.1             # via astroid
-zipp==3.1.0               # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
