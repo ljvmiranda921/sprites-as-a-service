@@ -16,6 +16,8 @@ survival rates. In addition, you can also access the generator via a REST API.
 The frontend is made with Vue.js (with Nuxt.js) whereas the backend is done
 using Python and FastAPI.
 
+You can also read my creative process and motivation for building this app in [my blog](https://ljvmiranda921.github.io/projects/2020/03/31/cellular-sprites/)
+
 ## Running the development server 
 
 The easiest way to run Sprites-as-a-service locally is via [docker
