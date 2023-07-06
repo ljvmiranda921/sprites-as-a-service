@@ -1,28 +1,63 @@
-certifi==2020.4.5.1       # via requests
-chardet==3.0.4            # via requests
-click==7.1.1              # via uvicorn
-cycler==0.10.0            # via matplotlib
-fastapi==0.54.1           # via -r requirements.in
-gunicorn==20.0.4          # via -r requirements.in
-h11==0.9.0                # via uvicorn
-httptools==0.1.1          # via uvicorn
-idna==2.9                 # via requests
-kiwisolver==1.2.0         # via matplotlib
-loguru==0.4.1             # via -r requirements.in, pyseagull
-matplotlib==3.2.1         # via -r requirements.in, pyseagull
-numpy==1.18.2             # via -r requirements.in, matplotlib, pyseagull, scipy
-pydantic==1.4             # via fastapi
-pyparsing==2.4.7          # via matplotlib
-pyseagull==1.0.0b3        # via -r requirements.in
-python-dateutil==2.8.1    # via matplotlib
-requests==2.23.0          # via -r requirements.in
-scipy==1.4.1              # via pyseagull
-six==1.14.0               # via cycler, python-dateutil
-starlette==0.13.2         # via fastapi
-urllib3==1.25.8           # via requests
-uvicorn==0.11.7           # via -r requirements.in
-uvloop==0.14.0            # via uvicorn
-websockets==8.1           # via uvicorn
+certifi==2020.4.5.1
+    # via requests
+chardet==3.0.4
+    # via requests
+click==7.1.1
+    # via uvicorn
+cycler==0.10.0
+    # via matplotlib
+fastapi==0.54.1
+    # via -r requirements.in
+gunicorn==20.0.4
+    # via -r requirements.in
+h11==0.9.0
+    # via uvicorn
+httptools==0.1.1
+    # via uvicorn
+idna==2.9
+    # via requests
+kiwisolver==1.2.0
+    # via matplotlib
+loguru==0.4.1
+    # via
+    #   -r requirements.in
+    #   pyseagull
+matplotlib==3.2.1
+    # via
+    #   -r requirements.in
+    #   pyseagull
+numpy==1.25.0
+    # via
+    #   -r requirements.in
+    #   matplotlib
+    #   pyseagull
+    #   scipy
+pydantic==1.4
+    # via fastapi
+pyparsing==2.4.7
+    # via matplotlib
+pyseagull==1.0.0b3
+    # via -r requirements.in
+python-dateutil==2.8.1
+    # via matplotlib
+requests==2.23.0
+    # via -r requirements.in
+scipy==1.10.0
+    # via pyseagull
+six==1.14.0
+    # via
+    #   cycler
+    #   python-dateutil
+starlette==0.13.2
+    # via fastapi
+urllib3==1.25.8
+    # via requests
+uvicorn==0.11.7
+    # via -r requirements.in
+uvloop==0.14.0
+    # via uvicorn
+websockets==8.1
+    # via uvicorn
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
