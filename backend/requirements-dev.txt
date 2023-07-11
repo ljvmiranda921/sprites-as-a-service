@@ -1,51 +1,152 @@
-appdirs==1.4.3            # via black
-astroid==2.4.0            # via pylint
-attrs==19.3.0             # via black, pytest
-black==19.10b0            # via -r requirements-dev.in
-certifi==2020.4.5.1       # via -r requirements.txt, requests
-chardet==3.0.4            # via -r requirements.txt, requests
-click==7.1.1              # via -r requirements.txt, black, uvicorn
-coverage==5.1             # via pytest-cov
-cycler==0.10.0            # via -r requirements.txt, matplotlib
-fastapi==0.54.1           # via -r requirements.txt
-gunicorn==20.0.4          # via -r requirements.txt
-h11==0.9.0                # via -r requirements.txt, uvicorn
-httptools==0.1.1          # via -r requirements.txt, uvicorn
-idna==2.9                 # via -r requirements.txt, requests
-isort==4.3.21             # via pylint
-kiwisolver==1.2.0         # via -r requirements.txt, matplotlib
-lazy-object-proxy==1.4.3  # via astroid
-loguru==0.4.1             # via -r requirements.txt, pyseagull
-matplotlib==3.2.1         # via -r requirements.txt, pyseagull
-mccabe==0.6.1             # via pylint
-memory-profiler==0.57.0   # via -r requirements-dev.in
-more-itertools==8.2.0     # via pytest
-numpy==1.18.2             # via -r requirements.txt, matplotlib, pyseagull, scipy
-packaging==20.3           # via pytest
-pathspec==0.8.0           # via black
-pluggy==0.13.1            # via pytest
-psutil==5.7.0             # via memory-profiler
-py==1.8.1                 # via pytest
-pydantic==1.4             # via -r requirements.txt, fastapi
-pylint==2.5.0             # via -r requirements-dev.in
-pyparsing==2.4.7          # via -r requirements.txt, matplotlib, packaging
-pyseagull==1.0.0b3        # via -r requirements.txt
-pytest-cov==2.8.1         # via -r requirements-dev.in
-pytest==5.4.1             # via -r requirements-dev.in, pytest-cov
-python-dateutil==2.8.1    # via -r requirements.txt, matplotlib
-regex==2020.4.4           # via black
-requests==2.23.0          # via -r requirements.txt
-scipy==1.4.1              # via -r requirements.txt, pyseagull
-six==1.14.0               # via -r requirements.txt, astroid, cycler, packaging, python-dateutil
-starlette==0.13.2         # via -r requirements.txt, fastapi
-toml==0.10.0              # via black, pylint
-typed-ast==1.4.1          # via black
-urllib3==1.25.8           # via -r requirements.txt, requests
-uvicorn==0.11.7           # via -r requirements.txt
-uvloop==0.14.0            # via -r requirements.txt, uvicorn
-wcwidth==0.1.9            # via pytest
-websockets==8.1           # via -r requirements.txt, uvicorn
-wrapt==1.12.1             # via astroid
+appdirs==1.4.3
+    # via black
+astroid==2.4.0
+    # via pylint
+attrs==19.3.0
+    # via
+    #   black
+    #   pytest
+black==19.10b0
+    # via -r requirements-dev.in
+certifi==2020.4.5.1
+    # via
+    #   -r requirements.txt
+    #   requests
+chardet==3.0.4
+    # via
+    #   -r requirements.txt
+    #   requests
+click==7.1.1
+    # via
+    #   -r requirements.txt
+    #   black
+    #   uvicorn
+coverage==5.1
+    # via pytest-cov
+cycler==0.10.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+fastapi==0.54.1
+    # via -r requirements.txt
+gunicorn==20.0.4
+    # via -r requirements.txt
+h11==0.9.0
+    # via
+    #   -r requirements.txt
+    #   uvicorn
+httptools==0.1.1
+    # via
+    #   -r requirements.txt
+    #   uvicorn
+idna==2.9
+    # via
+    #   -r requirements.txt
+    #   requests
+isort==4.3.21
+    # via pylint
+kiwisolver==1.2.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+lazy-object-proxy==1.4.3
+    # via astroid
+loguru==0.4.1
+    # via
+    #   -r requirements.txt
+    #   pyseagull
+matplotlib==3.2.1
+    # via
+    #   -r requirements.txt
+    #   pyseagull
+mccabe==0.6.1
+    # via pylint
+memory-profiler==0.57.0
+    # via -r requirements-dev.in
+more-itertools==8.2.0
+    # via pytest
+numpy==1.25.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+    #   pyseagull
+    #   scipy
+packaging==20.3
+    # via pytest
+pathspec==0.8.0
+    # via black
+pluggy==0.13.1
+    # via pytest
+psutil==5.7.0
+    # via memory-profiler
+py==1.8.1
+    # via pytest
+pydantic==1.4
+    # via
+    #   -r requirements.txt
+    #   fastapi
+pylint==2.5.0
+    # via -r requirements-dev.in
+pyparsing==2.4.7
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+    #   packaging
+pyseagull==1.0.0b3
+    # via -r requirements.txt
+pytest==5.4.1
+    # via
+    #   -r requirements-dev.in
+    #   pytest-cov
+pytest-cov==2.8.1
+    # via -r requirements-dev.in
+python-dateutil==2.8.1
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+regex==2020.4.4
+    # via black
+requests==2.23.0
+    # via -r requirements.txt
+scipy==1.10.0
+    # via
+    #   -r requirements.txt
+    #   pyseagull
+six==1.14.0
+    # via
+    #   -r requirements.txt
+    #   astroid
+    #   cycler
+    #   packaging
+    #   python-dateutil
+starlette==0.13.2
+    # via
+    #   -r requirements.txt
+    #   fastapi
+toml==0.10.0
+    # via
+    #   black
+    #   pylint
+typed-ast==1.4.1
+    # via black
+urllib3==1.25.8
+    # via
+    #   -r requirements.txt
+    #   requests
+uvicorn==0.11.7
+    # via -r requirements.txt
+uvloop==0.14.0
+    # via
+    #   -r requirements.txt
+    #   uvicorn
+wcwidth==0.1.9
+    # via pytest
+websockets==8.1
+    # via
+    #   -r requirements.txt
+    #   uvicorn
+wrapt==1.12.1
+    # via astroid
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
