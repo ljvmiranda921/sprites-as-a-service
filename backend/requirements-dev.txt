@@ -51,7 +51,7 @@ kiwisolver==1.2.0
     #   matplotlib
 lazy-object-proxy==1.4.3
     # via astroid
-loguru==0.4.1
+loguru==0.5.3
     # via
     #   -r requirements.txt
     #   pyseagull

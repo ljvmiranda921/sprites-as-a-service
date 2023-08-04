@@ -18,7 +18,7 @@ idna==2.9
     # via requests
 kiwisolver==1.2.0
     # via matplotlib
-loguru==0.4.1
+loguru==0.5.3
     # via
     #   -r requirements.in
     #   pyseagull
